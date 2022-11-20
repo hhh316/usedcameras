@@ -4,7 +4,6 @@
 
 $(function() {
     $('td').click(function() {
-        $('tr').removeClass('active');
         $(this).parent().addClass('active'); 
     });
 });
@@ -20,18 +19,19 @@ text-align: left !important;
 
 .active {
 color: red;
+font-weight:bold;
 }
 
 table{
-width:px;
+min-width:px;
 border-collapse:separate;
 background:white;
 border-spacing: 0px;
 
 }
 
-.container {
-margin-top: 50px !important;
+.container_cameras {
+margin-top: 0px !important;
 margin: auto;
 width:80%;
 height:80%;
@@ -41,61 +41,91 @@ padding:0px;
 background:white;
 }
 
-td:first-child {
-border-top:1px solid silver;
-min-width:150px !important;
+.container_lenses {
+margin-top: 0px !important;
+margin: auto;
+width:80%;
+height:40%;
+border:0px solid whitesmoke;
+overflow:scroll ;
+padding:0px;
+background:white;
+}
+
+td:nth-child(1) {
+min-width:300px !important;
 position:sticky;
 left:0;
 top: 0;
-background: white ;
+background:white  ;
 text-align: left !important;
-z-index: 3
-border-top: 4px solid #F2F4F4;
-box-shadow: 0px 0px #F2F4F4;
-font-weight: bold;
+border-top: 1x solid silver;
+box-shadow: 1px 0px silver;
+font-weight: bol;
+z-index:4;
+}
+
+td:nth-child(2) {
+min-width:145px !important;
+text-align: center !important;
+position:sticky;
+left:308;
+top: 0;
+background:white  ;
+border-top: 1x solid silver;
+box-shadow: 1px 0px silver;
+font-weight: bol;
 }
 
 th {
 position: sticky;
-background-color: white;
+background-color: darkslateblue;
+color: white;
 top: 0;
-border-bottom:0px solid grey;
-z-index: 2;
+border-right:px solid grey;
+z-index: 3;
 padding:4px;
 text-align: right;
-font-weight: bold;
-border-top:1px solid silver;
-min-width:150px !important;
+font-weight: normal;
+border-top:px solid silver;
+min-width:145px !important;
+box-shadow: px px silver;
 }
 
 td{
 border-top:1px solid silver;
-min-width:150px !important;
+min-width:145px !important;
 padding:4px;
 text-align: right;
 white-space: nowra;
+box-shadow: 0px 0px silver;
 }
 
-tr:hover {
-    background-color:yello !important;
+t:hover {
+    background-color:yellow !important;
     color:re;
     padding-top: px;
     padding-bottom: px;
 }
 
-t:nth-child(even) {background-color:#F2F3F4 !importan ;}
 
-th:nth-child(even) {background-color: ;}
+t:nth-child(2) {color:blue;}
+
+t:nth-child(even) {background-color:ghostwhite ;}
+
 
 </style>
 <body>
 
-<div class="container">
+<h1 style="margin-left:50%;">Cameras</h1>
+
+<div class="container_cameras">
 
 <table>
 
 <tr>
-<td style="z-index: 4; font-weight: bold; border-bottom:0px solid grey; border-top: 0px !important; border-right: 0px !important; border-left: 0px !important;">Camera</td>
+<td style="z-index: 5; font-weight: normal; border-top: 1px solid darkslateblue; background-color: darkslateblue; color:white; box-shadow: 0 0;">Camera</td>
+<td style="z-index: 5; font-weight: normal; border-top: 1px solid darkslateblue; background-color: darkslateblue; color:white; box-shadow: 0 0;">Avg. Used Price</td>
 <th>Released		</th>
 <th>Camera Type		</th>
 <th>Sensor Size		</th>
@@ -103,11 +133,12 @@ th:nth-child(even) {background-color: ;}
 <th>Stabilzation		</th>
 <th>Low Pass Filter		</th>
 <th>ISO Range		</th>
-<th>Autofocus Points	</th>			
+<th>Autofocus Points	</th>
+<th>AF Micro Adjust		</th>					
 <th>Mechanical Shutter	</th>
 <th>Continuous FPS		</th>	
 <th>Electronic Shutter	</th>
-<th>Built-Flash		</th>			
+<th>Built-in Flash		</th>			
 <th>Flash Sync		</th>
 <th>Hot-Shoe		</th>	
 <th>Viewfinder (VF)		</th>	
@@ -118,10 +149,13 @@ th:nth-child(even) {background-color: ;}
 <th>LCD Dots		</th>	
 <th>LCD Touchscreen		</th>	
 <th>LCD Tilt		</th>	
-<th>Top LCD Screen		</th>	
+<th>Top LCD Screen		</th>
 <th>Gps Built-in		</th>
-<th>Wifi Built-in		</th>	
+<th>Wifi Built-in		</th>
+<th>Headphone Jack		</th>
+<th>Microphone Port		</th>				
 <th>Video Quality		</th>
+<th>Recording FPS		</th>
 <th>Lens Mount		</th>	
 <th>Memory Card Slots	</th>
 <th>Weatherproof		</th>	
@@ -130,7 +164,8 @@ th:nth-child(even) {background-color: ;}
 </tr>
 
 <tr>
-<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311&_nkw=canon+eos+10d&_sacat=0">Canon 10D</a>	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+eos+10d&_sacat=0&rt=nc&LH_PrefLoc=1">Canon 10D</a>	</td>	<!--Camera-->
+<td>£33	</td>	<!--Avg. Used Price-->
 <td>2003	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -139,16 +174,17 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 1600	</td>	<!--ISO range-->	
 <td>7	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>3.0 fps	</td>	<!--Continuous-->
+<td>3.0	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>95%	</td>	<!--Coverage-->	
 <td>0.55x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>1.8" 	</td>	<!--LCD size-->
 <td>118k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
@@ -156,16 +192,20 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>No	</td>	<!--Wifi-->
-<td>No	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (CF card)	</td>	<!--Storage-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage-->
 <td>No	</td>	<!--Weather sealed-->		
 <td>875g	</td>	<!--Weight-->
 <td>150 x 107 x 075	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=canon+1dx&_sacat=0">Canon 1DX</a>	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1dx&_sacat=0&rt=nc&LH_PrefLoc=1">Canon 1DX</a>	</td>	<!--Camera-->
+<td>£830	</td>	<!--Avg. Used Price-->
 <td>2011	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -174,33 +214,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>61	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>14.0 fps	</td>	<!--Continuous-->
+<td>14.0	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.76x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
-<td>No	</td>	<!--Wifi built in-->
-<td>1080p 30fps	</td>	<!--Video-->
-<td>EF-mount	</td>	<!--Lens mount-->
-<td>2 (CF card)	</td>	<!--Storage-->
+<td>Attachment	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>2 CF cards	</td>	<!--Storage-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>1340g	</td>	<!--Weight-->
 <td>158 x 164 x 083	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 1DX II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1dx+mark+ii&_sacat=31388&rt=nc&LH_PrefLoc=1">Canon 1DX II</a>	</td>	<!--Camera-->
+<td>£1325	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -209,33 +254,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>61	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>16.0 fps	</td>	<!--Continuous-->
+<td>16.0	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.76x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1620k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
-<td>No	</td>	<!--Wifi-->
-<td>4k 60fps	</td>	<!--Video-->
-<td>EF-mount	</td>	<!--Lens mount-->
-<td>2 (CF card)	</td>	<!--Storage-->
+<td>Attachment	</td>	<!--Wifi-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>4k	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>2 CF cards	</td>	<!--Storage-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>1530g	</td>	<!--Weight-->
 <td>158 x 168 x 083	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 20D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+20d+body&_sacat=0&rt=nc&LH_PrefLoc=1">Canon 20D</a>	</td>	<!--Camera-->
+<td>£38	</td>	<!--Avg. Used Price-->
 <td>2004	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->	
@@ -244,16 +294,17 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 1600	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>95%	</td>	<!--Coverage-->	
 <td>0.56x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>1.8" 	</td>	<!--LCD size-->
 <td>118k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
@@ -261,16 +312,20 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>No	</td>	<!--Wifi built in-->
-<td>No	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (CF card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>770g	</td>	<!--Weight-->
 <td>144 x 106 x 072	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 30D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+30d+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=canon+20d+body&_osacat=0&LH_PrefLoc=1">Canon 30D</a>	</td>	<!--Camera-->
+<td>£53	</td>	<!--Avg. Used Price-->
 <td>2006	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -279,16 +334,17 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 1600	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>95%	</td>	<!--Coverage-->	
 <td>0.56x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>2.5" 	</td>	<!--LCD size-->
 <td>230k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
@@ -296,16 +352,20 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>No	</td>	<!--Wifi built in-->
-<td>No	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (CF card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>784g	</td>	<!--Weight-->
 <td>144 x 106 x 074	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 40D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=canon+40d+body&_sacat=0&LH_TitleDesc=0&_odkw=canon+30d+body&_osacat=0&LH_PrefLoc=1">Canon 40D</a>	</td>	<!--Camera-->
+<td>£70	</td>	<!--Avg. Used Price-->
 <td>2007	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -314,16 +374,17 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 1600	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>6.5 fps	</td>	<!--Continuous-->
+<td>6.5	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>95%	</td>	<!--Coverage-->	
 <td>0.60x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>230k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
@@ -331,16 +392,20 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>No	</td>	<!--Wifi built in-->
-<td>No	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (CF card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>822g	</td>	<!--Weight-->
 <td>146 x 108 x 074	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 50D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+50d+body&_sacat=0&rt=nc&LH_PrefLoc=1&_fsrp=1">Canon 50D</a>	</td>	<!--Camera-->
+<td>£103	</td>	<!--Avg. Used Price-->
 <td>2008	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->	
@@ -349,16 +414,17 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 3200	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>6.3 fps	</td>	<!--Continuous-->
+<td>6.3	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>95%	</td>	<!--Coverage-->	
 <td>0.60x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>918k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
@@ -366,9 +432,12 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>No	</td>	<!--Wifi built in-->
-<td>No	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (CF card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>822g	</td>	<!--Weight-->
 <td>146 x 108 x 074	</td>	<!--Size (mm)-->		
@@ -377,7 +446,8 @@ th:nth-child(even) {background-color: ;}
 
 
 <tr>
-<td>Canon 5D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_nkw=canon+5d+classic&_sop=13&rt=nc&LH_PrefLoc=1">Canon 5D</a>	</td>	<!--Camera-->
+<td>£161	</td>	<!--Avg. Used Price-->
 <td>2005	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -386,16 +456,17 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 1600	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>3.0 fps	</td>	<!--Continuous-->
+<td>3.0	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>96%	</td>	<!--Coverage-->	
 <td>0.71x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>2.5" 	</td>	<!--LCD size-->
 <td>230k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
@@ -403,16 +474,20 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>No	</td>	<!--Wifi built in-->
-<td>No	</td>	<!--Video-->
-<td>EF & EF-S-mount	</td>	<!--Lens mount-->
-<td>1 (CF card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF & EF-S	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>906g	</td>	<!--Weight-->
 <td>152 x 113 x 075	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 5D II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1311&_nkw=canon+5d+mark+ii+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=nikon+d300+body&_osacat=0&LH_PrefLoc=1">Canon 5D II</a>	</td>	<!--Camera-->
+<td>£254	</td>	<!--Avg. Used Price-->
 <td>2008	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -421,33 +496,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 6400	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>3.9 fps	</td>	<!--Continuous-->
+<td>3.9	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>98%	</td>	<!--Coverage-->	
 <td>0.71x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>920k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>No	</td>	<!--Wifi built in-->	
-<td>1080p 30fps	</td>	<!--Video-->
-<td>EF & EF-S-mount	</td>	<!--Lens mount-->
-<td>1 (CF card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF & EF-S	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>904g	</td>	<!--Weight-->
 <td>152 x 113 x 075	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 5D III	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_nkw=canon+5d+mark+iii+body+only&_sop=12&rt=nc&LH_PrefLoc=1">Canon 5D III</a>	</td>	<!--Camera-->
+<td>£538	</td>	<!--Avg. Used Price-->
 <td>2012	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -456,33 +536,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 25600	</td>	<!--ISO range-->	
 <td>61	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>6.0 fps	</td>	<!--Continuous-->
+<td>6.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.71x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>No	</td>	<!--Wifi built in-->	
-<td>1080p 30fps	</td>	<!--Video-->
-<td>EF & EF-S-mount	</td>	<!--Lens mount-->
-<td>2 (CF & SD card)	</td>	<!--Storage slots-->
+<td>Attachment	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF & EF-S	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>950g	</td>	<!--Weight-->
 <td>152 x 116 x 076	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l2632&_nkw=canon+5d+mark+iv&_sacat=31388">Canon 5D IV</a>	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+5d+mark+iv&_sacat=31388&rt=nc&LH_PrefLoc=1">Canon 5D IV</a>	</td>	<!--Camera-->
+<td>£1270	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -491,33 +576,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 32000	</td>	<!--ISO range-->	
 <td>61	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>7.0 fps	</td>	<!--Continuous-->
+<td>7.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.71x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1620k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>EF & EF-S-mount	</td>	<!--Lens mount-->
-<td>2 (CF & SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF & EF-S	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>890g	</td>	<!--Weight-->
 <td>150 x 116 x 075	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 6D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+6d+body+only&_sacat=0&LH_TitleDesc=0&_odkw=canon+6d+ii+body+only&_osacat=0&_sop=12&LH_PrefLoc=1">Canon 6D</a>	</td>	<!--Camera-->
+<td>£375	</td>	<!--Avg. Used Price-->
 <td>2013	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -526,33 +616,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 25600	</td>	<!--ISO range-->	
 <td>11	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>4.5 fps	</td>	<!--Continuous-->
+<td>4.5	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/180	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>97%	</td>	<!--Coverage-->	
 <td>0.71x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>1080p 30fps	</td>	<!--Video-->
-<td>EF & EF-S-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF & EF-S	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>770g	</td>	<!--Weight-->
 <td>145 x 111 x 071	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 6D II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+6d+ii+body+only&_sacat=0&LH_TitleDesc=0&_odkw=canon+60d+body+only&_osacat=0&_sop=12&LH_PrefLoc=1">Canon 6D II</a>	</td>	<!--Camera-->
+<td>£750	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -561,33 +656,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 40000	</td>	<!--ISO range-->	
 <td>45	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>6.5 fps	</td>	<!--Continuous-->
+<td>6.5	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/180	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>98%	</td>	<!--Coverage-->	
 <td>0.71x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>EF & EF-S-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>EF & EF-S	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>765g	</td>	<!--Weight-->
 <td>144 x 111 x 075	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 60D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+60d+body+only&_sacat=0&LH_TitleDesc=0&_odkw=canon+70d+body+only&_osacat=0&_sop=12&LH_PrefLoc=1">Canon 60D</a>	</td>	<!--Camera-->
+<td>£175	</td>	<!--Avg. Used Price-->
 <td>2010	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -596,33 +696,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 6400	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>96%	</td>	<!--Coverage-->	
 <td>0.60x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>No	</td>	<!--Wifi built in-->
-<td>1080p 30fps	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>755g	</td>	<!--Weight-->
 <td>145 x 106 x 079	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 70D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+70d+body+only&_sacat=0&LH_TitleDesc=0&_odkw=canon+77d+body+only&_osacat=0&_sop=12&LH_PrefLoc=1">Canon 70D</a>	</td>	<!--Camera-->
+<td>£269	</td>	<!--Avg. Used Price-->
 <td>2013	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -631,32 +736,78 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 12800	</td>	<!--ISO range-->	
 <td>19	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>7.0 fps	</td>	<!--Continuous-->
+<td>7.0	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>98%	</td>	<!--Coverage-->	
 <td>0.60x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Attachment	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>1080p 30fps	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots--><td>Yes	</td>	<!--Weather sealed-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
 <td>755g	</td>	<!--Weight-->
 <td>139 x 104 x 079	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 7D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+77d+body+only&_sacat=0&LH_TitleDesc=0&_odkw=canon+7d+body+only&_osacat=0&_sop=12&LH_PrefLoc=1">Canon 77D</a>	</td>	<!--Camera-->
+<td>£398	</td>	<!--Avg. Used Price-->
+<td>2017	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>24.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 25600	</td>	<!--ISO range-->	
+<td>45	</td>	<!--Autofocus-->
+<td>***	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>6.0	</td>	<!--Continuous-->
+<td>No	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/200	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>95%	</td>	<!--Coverage-->	
+<td>0.51x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0" 	</td>	<!--LCD size-->
+<td>1040k	</td>	<!--LCD resolution-->
+<td>Yes	</td>	<!--Touch screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>Attachment	</td>	<!--Gps built in-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>540g	</td>	<!--Weight-->
+<td>131 x 100 x 076	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+7d+body+only&_sacat=0&LH_TitleDesc=0&_odkw=canon+7d+ii+body+only&_osacat=0&_sop=12&LH_PrefLoc=1">Canon 7D</a>	</td>	<!--Camera-->
+<td>£171	</td>	<!--Avg. Used Price-->
 <td>2009	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -665,16 +816,17 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 6400	</td>	<!--ISO range-->	
 <td>19	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>8.0 fps	</td>	<!--Continuous-->
+<td>8.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.63x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>920k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
@@ -682,15 +834,20 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>No	</td>	<!--Wifi built in-->
-<td>1080p 30fps	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (CF card)	</td>	<!--Storage slots--><td>Yes	</td>	<!--Weather sealed-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
 <td>860g	</td>	<!--Weight-->
 <td>148 x 111 x 074	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 7D II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+7d+ii+body+only&_sacat=0&LH_TitleDesc=0&_odkw=canon+70d+body+only&_osacat=0&_sop=12&LH_PrefLoc=1">Canon 7D II</a>	</td>	<!--Camera-->
+<td>£449	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -699,16 +856,17 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 16000	</td>	<!--ISO range-->	
 <td>65	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>10.0 fps	</td>	<!--Continuous-->
+<td>10.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.63x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
@@ -716,15 +874,20 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
 <td>No	</td>	<!--Wifi built in-->
-<td>1080p 60fps	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>2 (CF & SD card)	</td>	<!--Storage slots--><td>Yes	</td>	<!--Weather sealed-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
 <td>910g	</td>	<!--Weight-->
 <td>149 x 112 x 078	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 80D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_nkw=canon+80d+body+only&_sop=12&rt=nc&LH_PrefLoc=1">Canon 80D</a>	</td>	<!--Camera-->
+<td>£456	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -733,33 +896,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 16000	</td>	<!--ISO range-->			
 <td>45	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>7.0 fps	</td>	<!--Continuous-->
+<td>7.0	</td>	<!--Continuous-->
 <td>No	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.60x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>Yes	</td>	<!--Wifi built in-->
-<td>1080p 60fps	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>730g	</td>	<!--Weight-->
 <td>139 x 105 x 079	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon 90D	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+90d+body+only&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=canon+m5+body+only&_osacat=0&_sop=12&LH_PrefLoc=1">Canon 90D</a>	</td>	<!--Camera-->
+<td>£841	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->	
@@ -768,33 +936,118 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 25600	</td>	<!--ISO range-->	
 <td>45	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>11.0 fps	</td>	<!--Continuous-->
+<td>11.0	</td>	<!--Continuous-->
 <td>1/16000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.60x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Attachment	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>EF-S & EF-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>701g	</td>	<!--Weight-->
 <td>141 x 105 x 077	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon R	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+g9+x+body+only&_sacat=0&LH_TitleDesc=0&_sop=12&rt=nc&LH_PrefLoc=1">Canon G9 X</a>	</td>	<!--Camera-->
+<td>£204	</td>	<!--Avg. Used Price-->
+<td>2015	</td>	<!--Release date-->
+<td>Compact	</td>	<!--Type-->
+<td>13.2 x 8.8mm	</td>	<!--Sensor-->	
+<td>20.0	</td>	<!--Megapixels-->
+<td>3.0-stops	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>125 - 12800	</td>	<!--ISO range-->	
+<td>31	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
+<td>1/2000	</td>	<!--Max shutter-->
+<td>6.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/2000	</td>	<!--Flash sync-->
+<td>No	</td>	<!--Hot-shoe-->
+<td>No	</td>	<!--Viewfinder-->
+<td>Na	</td>	<!--Coverage-->	
+<td>Na	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0" 	</td>	<!--LCD size-->
+<td>1040k	</td>	<!--LCD resolution-->
+<td>Yes	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>Fixed 28-84mm	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>209g	</td>	<!--Weight-->
+<td>098 x 058 x 031	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+m5+body+only&_sacat=0&LH_TitleDesc=0&_sop=12&rt=nc&LH_PrefLoc=1">Canon M5</a>	</td>	<!--Camera-->
+<td>£312	</td>	<!--Avg. Used Price-->
+<td>2016	</td>	<!--Release date-->
+<td>Mirrorless	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>24.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 25600	</td>	<!--ISO range-->	
+<td>49	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>7.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/200	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Electronic	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>No data	</td>	<!--Magnification-->
+<td>2360k	</td>	<!--EVF resolution-->
+<td>3.2"	</td>	<!--LCD size-->
+<td>1620k	</td>	<!--LCD resolution-->
+<td>Yes	</td>	<!--Touch screen-->
+<td>Flip	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>EF-M	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>427g	</td>	<!--Weight-->
+<td>116 x 089 x 061	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+r+body&_sacat=0&rt=nc&LH_PrefLoc=1">Canon R</a>	</td>	<!--Camera-->
+<td>£1023	</td>	<!--Avg. Used Price-->
 <td>2018	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -803,10 +1056,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 40000	</td>	<!--ISO range-->	
 <td>5655	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>8.0 fps	</td>	<!--Continuous-->
+<td>8.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -816,20 +1070,24 @@ th:nth-child(even) {background-color: ;}
 <td>3.2" 	</td>	<!--LCD size-->
 <td>2100k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>RF-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>RF	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>660g	</td>	<!--Weight-->
 <td>136 x 098 x 084	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon R10	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+r10+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=canon+r+body&_osacat=0&LH_PrefLoc=1">Canon R10</a>	</td>	<!--Camera-->
+<td>£817	</td>	<!--Avg. Used Price-->
 <td>2022	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -838,10 +1096,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 32000	</td>	<!--ISO range-->	
 <td>651	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>15.0 fps	</td>	<!--Continuous-->
+<td>15.0	</td>	<!--Continuous-->
 <td>1/16000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -851,20 +1110,24 @@ th:nth-child(even) {background-color: ;}
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>Yes	</td>	<!--Wifi built in-->
-<td>4k 30fps	</td>	<!--Video-->
-<td>RF-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>RF	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>426g	</td>	<!--Weight-->
 <td>123 x 088 x 083	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon R6	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+r6+body&_sacat=0&LH_TitleDesc=0&_odkw=canon+r16+body&_osacat=0&LH_PrefLoc=1">Canon R6</a>	</td>	<!--Camera-->
+<td>£1799	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -873,10 +1136,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 102400	</td>	<!--ISO range-->	
 <td>6072	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>12.0 fps	</td>	<!--Continuous-->
+<td>12.0	</td>	<!--Continuous-->
 <td>1/8000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -886,20 +1150,24 @@ th:nth-child(even) {background-color: ;}
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1620k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 60fps	</td>	<!--Video-->
-<td>RF-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>RF	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>680g	</td>	<!--Weight-->
 <td>138 x 098 x 088	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon R7	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+r7+body&_sacat=0&LH_TitleDesc=0&_odkw=canon+r6+body&_osacat=0&LH_PrefLoc=1">Canon R7</a>	</td>	<!--Camera-->
+<td>	</td>	<!--Avg. Used Price-->
 <td>2022	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -908,10 +1176,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 32000	</td>	<!--ISO range-->	
 <td>651	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>15.0 fps	</td>	<!--Continuous-->
+<td>15.0	</td>	<!--Continuous-->
 <td>1/16000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -921,20 +1190,24 @@ th:nth-child(even) {background-color: ;}
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1620k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
 <td>Yes	</td>	<!--Wifi built in-->
-<td>4k 60fps	</td>	<!--Video-->
-<td>RF-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>4k	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>RF	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>612g	</td>	<!--Weight-->
 <td>132 x 090 x 092	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon RP	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+rp+body&_sacat=0&LH_TitleDesc=0&_odkw=canon+r7+body&_osacat=0&LH_PrefLoc=1">Canon RP</a>	</td>	<!--Camera-->
+<td>£750	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -943,10 +1216,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 40000	</td>	<!--ISO range-->	
 <td>4779	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/180	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -956,55 +1230,64 @@ th:nth-child(even) {background-color: ;}
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 24fps	</td>	<!--Video-->
-<td>RF-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>24fps	</td>	<!--Video FPS-->
+<td>RF	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>485g	</td>	<!--Weight-->
 <td>133 x 085 x 070	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Canon S100	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+s100+camera&_sacat=0&LH_TitleDesc=0&_odkw=canon+rp+body&_osacat=0&LH_PrefLoc=1">Canon S100</a>	</td>	<!--Camera-->
+<td>£82	</td>	<!--Avg. Used Price-->
 <td>2011	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>5.58mm x 7.44mm	</td>	<!--Sensor-->
 <td>12.0	</td>	<!--Megapixels-->	
 <td>Optical	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>-80 - 6400	</td>	<!--ISO range-->	
+<td>80 - 6400	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
-<td>2.0 fps	</td>	<!--Continuous-->
+<td>2.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/2000	</td>	<!--Flash sync-->
 <td>No	</td>	<!--Hot-shoe-->
-<td>No viewfinder	</td>	<!--Viewfinder-->
-<td>No	</td>	<!--Coverage-->	
-<td>No	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>No	</td>	<!--Viewfinder-->
+<td>Na	</td>	<!--Coverage-->	
+<td>Na	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>461k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
-<td>No	</td>	<!--Wifi built in-->	
-<td>1080p 24fps	</td>	<!--Video-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>24fps	</td>	<!--Video FPS-->
 <td>Fixed 24-120mm	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>198g	</td>	<!--Weight-->
 <td>099 x 060 x 028	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Fujifilm GFX 100	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fuji+gfx+100+body&_sacat=0&LH_TitleDesc=0&_odkw=fuji+gfx+100&_osacat=0&LH_PrefLoc=1">Fujifilm GFX 100</a>	</td>	<!--Camera-->
+<td>	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Medium	</td>	<!--Sensor-->
@@ -1013,10 +1296,11 @@ th:nth-child(even) {background-color: ;}
 <td>***	</td>	<!--Low pass filter-->
 <td>100 - 12800	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>1/16000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/125	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1029,17 +1313,21 @@ th:nth-child(even) {background-color: ;}
 <td>Articulating	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>G-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>G	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>1320g	</td>	<!--Weight-->
 <td>156 x 164 x 103	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Fujifilm X100S	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x100s&_sacat=0&LH_TitleDesc=0&_odkw=fuji+x100s&_osacat=0&LH_PrefLoc=1">Fujifilm X100S</a>	</td>	<!--Camera-->
+<td>£424	</td>	<!--Avg. Used Price-->
 <td>2013	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->	
@@ -1048,10 +1336,11 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 12800	</td>	<!--ISO range-->	
 <td>49	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>6.0 fps	</td>	<!--Continuous-->
+<td>6.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/2000	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1064,17 +1353,101 @@ th:nth-child(even) {background-color: ;}
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>No	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
 <td>Fixed 35mm	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>445g	</td>	<!--Weight-->
 <td>127 x 074 x 054	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Fujifilm X-Pro3	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x-pro+1&_sacat=0&LH_TitleDesc=0&_odkw=fujifilm+x100s&_osacat=0&LH_PrefLoc=1">Fujifilm X-Pro 1</a>	</td>	<!--Camera-->
+<td>£287	</td>	<!--Avg. Used Price-->
+<td>2012	</td>	<!--Release date-->
+<td>Mirrorless	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>16.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>No	</td>	<!--Low pass filter-->
+<td>100 - 6400	</td>	<!--ISO range-->	
+<td>49	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>6.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/180	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical & EVF	</td>	<!--Viewfinder-->
+<td>90% & 100%	</td>	<!--Coverage-->	
+<td>0.60x	</td>	<!--Magnification-->
+<td>1140k	</td>	<!--EVF resolution-->
+<td>3.0" 	</td>	<!--LCD size-->
+<td>1230k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>24fps	</td>	<!--Video FPS-->
+<td>X	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>450g	</td>	<!--Weight-->
+<td>140 x 082 x 043	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x-pro+2&_sacat=0&LH_TitleDesc=0&_odkw=fujifilm+x-pro+1&_osacat=0&LH_PrefLoc=1">Fujifilm X-Pro 2</a>	</td>	<!--Camera-->
+<td>£617	</td>	<!--Avg. Used Price-->
+<td>2016	</td>	<!--Release date-->
+<td>Mirrorless	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>24.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>No	</td>	<!--Low pass filter-->
+<td>200 - 12800	</td>	<!--ISO range-->	
+<td>273	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>8.0	</td>	<!--Continuous-->
+<td>1/32000	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical & EVF	</td>	<!--Viewfinder-->
+<td>92% & 100%	</td>	<!--Coverage-->	
+<td>0.60x	</td>	<!--Magnification-->
+<td>2360k	</td>	<!--EVF resolution-->
+<td>3.0" 	</td>	<!--LCD size-->
+<td>1620k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>X	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>495g	</td>	<!--Weight-->
+<td>141 x 083 x 056	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x-pro+3&_sacat=0&LH_TitleDesc=0&_odkw=fujifilm+x-pro+2&_osacat=0&LH_PrefLoc=1">Fujifilm X-Pro 3</a>	</td>	<!--Camera-->
+<td>£1182	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1083,15 +1456,16 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>160 - 12800	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>20.0 fps	</td>	<!--Continuous-->
+<td>20.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
-<td>EVF	</td>	<!--Viewfinder-->
-<td>95%	</td>	<!--Coverage-->	
-<td>No	</td>	<!--Magnification-->
+<td>Optical & EVF	</td>	<!--Viewfinder-->
+<td>95% & 100%	</td>	<!--Coverage-->	
+<td>0.52x	</td>	<!--Magnification-->
 <td>3690k	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1620k	</td>	<!--LCD resolution-->
@@ -1099,17 +1473,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>X-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>X	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>497g	</td>	<!--Weight-->
 <td>141 x 083 x 046	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Fujifilm X-T1	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=fujifilm+x-t1+body&_sacat=0&LH_PrefLoc=1&rt=nc&_fsrp=1">Fujifilm X-T1</a>	</td>	<!--Camera-->
+<td>£257	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->	
@@ -1117,11 +1495,12 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
 <td>200 - 6400	</td>	<!--ISO range-->	
-<td>***	</td>	<!--Autofocus-->
+<td>49	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>8.0 fps	</td>	<!--Continuous-->
+<td>8.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/180	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1134,17 +1513,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>X-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>X	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>440g	</td>	<!--Weight-->
 <td>129 x 090 x 047	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Fujifilm X-T2	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x-t2+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&rt=nc&_odkw=fujifilm+x-t1+body&_osacat=0&LH_PrefLoc=1">Fujifilm X-T2</a>	</td>	<!--Camera-->
+<td>£422	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1153,10 +1536,11 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>200 - 12800	</td>	<!--ISO range-->	
 <td>325	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>14.0 fps	</td>	<!--Continuous-->
+<td>14.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1169,17 +1553,21 @@ th:nth-child(even) {background-color: ;}
 <td>Articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>X-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>X	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>507g	</td>	<!--Weight-->
 <td>133 x 092 x 049	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Fujifilm X-T3	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x-t3+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&_odkw=fujifilm+x-t2+body&_osacat=0&LH_PrefLoc=1">Fujifilm X-T3</a>	</td>	<!--Camera-->
+<td>£737	</td>	<!--Avg. Used Price-->
 <td>2018	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1188,10 +1576,11 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>160 - 12800	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>11.0 fps	</td>	<!--Continuous-->
+<td>11.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1205,16 +1594,20 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->	
 <td>Yes	</td>	<!--Wifi built in-->
-<td>4k 60fps	</td>	<!--Video-->
-<td>X-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>4k	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>X	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>539g	</td>	<!--Weight-->
 <td>133 x 093 x 059	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Fujifilm X-T4	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x-t4+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&_odkw=fujifilm+x-t3+body&_osacat=0&LH_PrefLoc=1">Fujifilm X-T4</a>	</td>	<!--Camera-->
+<td>£1247	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1223,10 +1616,11 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>160 - 12800	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>15.0 fps	</td>	<!--Continuous-->
+<td>15.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1236,20 +1630,104 @@ th:nth-child(even) {background-color: ;}
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1620k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 60fps	</td>	<!--Video-->
-<td>X-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>X	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>607g	</td>	<!--Weight-->
 <td>135 x 093 x 064	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Nikon D300S	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x-t5+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&_odkw=fujifilm+x-t4+body&_osacat=0&LH_PrefLoc=1">Fujifilm X-T5</a>	</td>	<!--Camera-->
+<td>£	</td>	<!--Avg. Used Price-->
+<td>2022	</td>	<!--Release date-->
+<td>Mirrorless	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>40.0	</td>	<!--Megapixels-->	
+<td>7.0-stops	</td>	<!--Stabilzation-->
+<td>No	</td>	<!--Low pass filter-->
+<td>125 - 12800	</td>	<!--ISO range-->	
+<td>425	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>15.0	</td>	<!--Continuous-->
+<td>1/180000	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>EVF	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.80x	</td>	<!--Magnification-->
+<td>3690k	</td>	<!--EVF resolution-->
+<td>3.0" 	</td>	<!--LCD size-->
+<td>1840k	</td>	<!--LCD resolution-->
+<td>Yes	</td>	<!--Touch screen-->
+<td>Articulating	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>6.2K	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>X	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>557g	</td>	<!--Weight-->
+<td>130 x 091 x 064	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=nikon+d300+body&_sacat=0&rt=nc&LH_PrefLoc=1">Nikon D300</a>	</td>	<!--Camera-->
+<td>£103	</td>	<!--Avg. Used Price-->
+<td>2008	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>12.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>200 - 3200	</td>	<!--ISO range-->	
+<td>51	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>6.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.63x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0" 	</td>	<!--LCD size-->
+<td>922k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>None	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>DX & FX	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>925g	</td>	<!--Weight-->
+<td>147 x 114 x 074	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d300s+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&_odkw=fujifilm+x-t5+body&_osacat=0&LH_PrefLoc=1">Nikon D300S</a>	</td>	<!--Camera-->
+<td>£152	</td>	<!--Avg. Used Price-->
 <td>2009	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1258,33 +1736,78 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>200 - 3200	</td>	<!--ISO range-->	
 <td>51	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>7.0 fps	</td>	<!--Continuous-->
+<td>7.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.63x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>920k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
 <td>720p	</td>	<!--Video-->
-<td>DX & FX-mount	</td>	<!--Lens mount-->
-<td>2 (CF & SD card)	</td>	<!--Storage slots-->
+<td>24fps	</td>	<!--Video FPS-->
+<td>DX & FX	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>938g	</td>	<!--Weight-->
 <td>147 x 114 x 074	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Nikon D4S	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d3500+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&_odkw=nikon+d300s+body&_osacat=0&_sop=1&LH_PrefLoc=1">Nikon D3500</a>	</td>	<!--Camera-->
+<td>£276	</td>	<!--Avg. Used Price-->
+<td>2018	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>24.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>No	</td>	<!--Low pass filter-->
+<td>100 - 25600	</td>	<!--ISO range-->	
+<td>11	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>5.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/200	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>95%	</td>	<!--Coverage-->	
+<td>0.56x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0" 	</td>	<!--LCD size-->
+<td>921k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>DX & FX	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>365g	</td>	<!--Weight-->
+<td>124 x 097 x 070	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d4s+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&_odkw=nikon+d3500+body&_osacat=0&_sop=1&LH_PrefLoc=1">Nikon D4S</a>	</td>	<!--Camera-->
+<td>£1100	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -1293,33 +1816,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 25600	</td>	<!--ISO range-->	
 <td>51	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>11.0 fps	</td>	<!--Continuous-->
+<td>11.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.70x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>921k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Attachment	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>FX & DX-mount	</td>	<!--Lens mount-->
-<td>2 (CF & XQD card)	</td>	<!--Storage slots-->
+<td>Attachment	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>FX & DX	</td>	<!--Lens mount-->
+<td>1 CF / 1 XQD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>1350g	</td>	<!--Weight-->
 <td>160 x 157 x 091	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Nikon D700	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d700+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&_odkw=nikon+d4s+body&_osacat=0&_sop=1&LH_PrefLoc=1">Nikon D700</a>	</td>	<!--Camera-->
+<td>£297	</td>	<!--Avg. Used Price-->
 <td>2008	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -1328,33 +1856,78 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>200 - 6400	</td>	<!--ISO range-->	
 <td>51	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>95%	</td>	<!--Coverage-->	
 <td>0.72x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>922k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>No	</td>	<!--Video-->
-<td>FX & DX-mount	</td>	<!--Lens mount-->
-<td>1 (CF card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>FX & DX	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>1074g	</td>	<!--Weight-->
 <td>147 x 123 x 077	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Nikon D780	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=nikon+d7200+body&_sacat=0&rt=nc&LH_PrefLoc=1">Nikon D7200</a>	</td>	<!--Camera-->
+<td>£382	</td>	<!--Avg. Used Price-->
+<td>2015	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>24.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>No	</td>	<!--Low pass filter-->
+<td>100 - 25600	</td>	<!--ISO range-->	
+<td>51	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>6.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.63x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.2"	</td>	<!--LCD size-->
+<td>1229k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>Attachment	</td>	<!--Gps built in-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>DX & FX	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>765g	</td>	<!--Weight-->
+<td>135 x 107 x 076	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d780+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=nikon+d7200+body&_osacat=0&LH_PrefLoc=1">Nikon D780</a>	</td>	<!--Camera-->
+<td>	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -1363,103 +1936,158 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>51	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>7.0 fps	</td>	<!--Continuous-->
+<td>7.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.70x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1229k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
 <td>Flip	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>FX & DX-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>FX & DX	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>840g	</td>	<!--Weight-->
 <td>144 x 116 x 076	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Nikon D810	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d810+body&_sacat=0&LH_TitleDesc=0&_odkw=nikon+d780+body&_osacat=0&LH_PrefLoc=1">Nikon D810</a>	</td>	<!--Camera-->
+<td>£655	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->	
 <td>36.0	</td>	<!--Megapixels-->
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>-64 - 12800	</td>	<!--ISO range-->	
+<td>64 - 12800	</td>	<!--ISO range-->	
 <td>51	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.70x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1229k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>FX & DX-mount	</td>	<!--Lens mount-->
-<td>2 (CF & SD card)	</td>	<!--Storage slots-->
+<td>Attachment	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>FX & DX	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>980g	</td>	<!--Weight-->
 <td>146 x 123 x 082	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Nikon D850	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d850+body&_sacat=0&LH_TitleDesc=0&LH_BO=1&rt=nc&_odkw=nikon+d810+body&_osacat=0&_sop=1&LH_PrefLoc=1">Nikon D850</a>	</td>	<!--Camera-->
+<td>£1539	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>46.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>-64 - 25600	</td>	<!--ISO range-->	
+<td>64 - 25600	</td>	<!--ISO range-->	
 <td>153	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>7.0 fps	</td>	<!--Continuous-->
+<td>7.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.75x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1229k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
 <td>Flip	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>FX & DX-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>FX & DX	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>1015g	</td>	<!--Weight-->
 <td>146 x 124 x 079	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Nikon Z6	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=nikon+d90+body&_sacat=0&rt=nc&LH_PrefLoc=1">Nikon D90</a>	</td>	<!--Camera-->
+<td>£94	</td>	<!--Avg. Used Price-->
+<td>2008	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>12.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>200 - 3200	</td>	<!--ISO range-->	
+<td>11	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>4.5	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/200	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>96%	</td>	<!--Coverage-->	
+<td>0.64x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0"	</td>	<!--LCD size-->
+<td>920k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>Attachment	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>720p	</td>	<!--Video-->
+<td>24fps	</td>	<!--Video FPS-->
+<td>DX & FX	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>703g	</td>	<!--Weight-->
+<td>132 x 102 x 077	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+z6+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=nikon+d90+body&_osacat=0&LH_PrefLoc=1">Nikon Z6</a>	</td>	<!--Camera-->
+<td>£908	</td>	<!--Avg. Used Price-->
 <td>2018	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -1468,10 +2096,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>273	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>12.0 fps	</td>	<!--Continuous-->
+<td>12.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1484,17 +2113,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>Z-mount	</td>	<!--Lens mount-->
-<td>1 (XQD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>Z	</td>	<!--Lens mount-->
+<td>1 XQD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>675g	</td>	<!--Weight-->
 <td>134 x 101 x 068	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Nikon Z6 II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+z6+ii+body&_sacat=0&LH_TitleDesc=0&_odkw=nikon+z6+body&_osacat=0&LH_PrefLoc=1">Nikon Z6 II</a>	</td>	<!--Camera-->
+<td>£1459	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -1503,10 +2136,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>273	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>14.0 fps	</td>	<!--Continuous-->
+<td>14.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1519,17 +2153,23 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>Z-mount	</td>	<!--Lens mount-->
-<td>2 (XQD & SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>Z	</td>	<!--Lens mount-->
+<td>1 SD / 1 XQD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>705g	</td>	<!--Weight-->
 <td>134 x 101 x 070	</td>	<!--Size (mm)-->		
 </tr>
 
+
+
 <tr>
-<td>Olympus OM-1	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=om+system+om-1+body&_sacat=0&LH_TitleDesc=0&_odkw=nikon+z6+ii+body&_osacat=0&LH_PrefLoc=1">OM System OM-1</a>	</td>	<!--Camera-->
+<td>£1600	</td>	<!--Avg. Used Price-->
 <td>2022	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Four thirds	</td>	<!--Sensor-->	
@@ -1538,10 +2178,11 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>200 - 25600	</td>	<!--ISO range-->	
 <td>1053	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>10.0 fps	</td>	<!--Continuous-->
+<td>10.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1551,20 +2192,24 @@ th:nth-child(even) {background-color: ;}
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1620k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 60fps	</td>	<!--Video-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
 <td>Four thirds	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>599g	</td>	<!--Weight-->
 <td>135 x 092 x 073	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Panasonic Lumix G5	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=panasonic+lumix+g5+body&_sacat=0&LH_TitleDesc=0&_odkw=om+system+om-1+body&_osacat=0&LH_PrefLoc=1">Panasonic Lumix G5</a>	</td>	<!--Camera-->
+<td>£71	</td>	<!--Avg. Used Price-->
 <td>2012	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Four thirds	</td>	<!--Sensor-->
@@ -1573,10 +2218,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>160 - 12800	</td>	<!--ISO range-->	
 <td>23	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>6.0 fps	</td>	<!--Continuous-->
+<td>6.0	</td>	<!--Continuous-->
 <td>***	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/160	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1586,20 +2232,24 @@ th:nth-child(even) {background-color: ;}
 <td>3.0" 	</td>	<!--LCD size-->
 <td>920k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
 <td>Four thirds	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>396g	</td>	<!--Weight-->
 <td>120 x 083 x 071	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Panasonic Lumix G9	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=panasonic+lumix+g9+body&_sacat=0&LH_TitleDesc=0&_odkw=panasonic+lumix+g5+body&_osacat=0&LH_PrefLoc=1">Panasonic Lumix G9</a>	</td>	<!--Camera-->
+<td>£577	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Four thirds	</td>	<!--Sensor-->
@@ -1608,10 +2258,11 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>200 - 25600	</td>	<!--ISO range-->	
 <td>225	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>20.0 fps	</td>	<!--Continuous-->
+<td>20.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1621,20 +2272,24 @@ th:nth-child(even) {background-color: ;}
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1040k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 60fps	</td>	<!--Video-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
 <td>Four thirds	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>658g	</td>	<!--Weight-->
 <td>137 x 097 x 092	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Panasonic Lumix GX85	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=panasonic+lumix+gx80+body&_sacat=0&LH_TitleDesc=0&_odkw=panasonic+lumix+g9+body&_osacat=0&LH_PrefLoc=1">Panasonic Lumix GX80</a>	</td>	<!--Camera-->
+<td>£224	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Four thirds	</td>	<!--Sensor-->
@@ -1643,10 +2298,11 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>200 - 25600	</td>	<!--ISO range-->	
 <td>49	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>8.0 fps	</td>	<!--Continuous-->
+<td>8.0	</td>	<!--Continuous-->
 <td>1/16000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/160	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1659,17 +2315,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>Yes	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
 <td>Four thirds	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>426g	</td>	<!--Weight-->
 <td>122 x 071 x 044	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Pentax K1	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=pentax+k1+body&_sacat=0&rt=nc&LH_PrefLoc=1">Pentax K1</a>	</td>	<!--Camera-->
+<td>£810	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -1678,33 +2338,38 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 204800	</td>	<!--ISO range-->	
 <td>33	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>4.4 fps	</td>	<!--Continuous-->
+<td>4.4	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.70x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1037k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Articulating	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>K-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>K	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>1010g	</td>	<!--Weight-->
 <td>137 x 110 x 086	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Pentax K1 II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k1+ii+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=pentax+k1+body&_osacat=0&LH_PrefLoc=1">Pentax K1 II</a>	</td>	<!--Camera-->
+<td>	</td>	<!--Avg. Used Price-->
 <td>2018	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->	
@@ -1713,33 +2378,78 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 819200	</td>	<!--ISO range-->	
 <td>33	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>4.4 fps	</td>	<!--Continuous-->
+<td>4.4	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.70x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1037k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Articulating	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>K-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>K	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>1010g	</td>	<!--Weight-->
 <td>137 x 110 x 086	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Pentax K3	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k10d+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k1+ii+body&_osacat=0&LH_PrefLoc=1">Pentax K10D</a>	</td>	<!--Camera-->
+<td>£89	</td>	<!--Avg. Used Price-->
+<td>2006	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>10.0	</td>	<!--Megapixels-->	
+<td>4.0-stops	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 1600	</td>	<!--ISO range-->	
+<td>11	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>3.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/180	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>95%	</td>	<!--Coverage-->	
+<td>0.64x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>2.5" 	</td>	<!--LCD size-->
+<td>210k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>None	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>K	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>793g	</td>	<!--Weight-->
+<td>142 x 101 x 070	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k3+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k10d+body&_osacat=0&LH_PrefLoc=1">Pentax K3</a>	</td>	<!--Camera-->
+<td>£267	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1748,68 +2458,78 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>27	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>8.0 fps	</td>	<!--Continuous-->
+<td>8.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/180	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.64x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1037k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>K-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>K	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>800g	</td>	<!--Weight-->
 <td>131 x 100 x 077	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Pentax K3 II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k3+ii+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k3+body&_osacat=0&LH_PrefLoc=1">Pentax K3 II</a>	</td>	<!--Camera-->
+<td>	</td>	<!--Avg. Used Price-->
 <td>2015	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
 <td>24.0	</td>	<!--Megapixels-->	
-<td>In-body	</td>	<!--Stabilzation-->
+<td>4.5-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>27	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>8.3 fps	</td>	<!--Continuous-->
+<td>8.3	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/180	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.64x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1037k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>Yes	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>K-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Attachment	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>K	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>800g	</td>	<!--Weight-->
 <td>131 x 100 x 077	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Pentax K3 III	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k3+iii+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k3+ii+body&_osacat=0&LH_PrefLoc=1">Pentax K3 III</a>	</td>	<!--Camera-->
+<td>	</td>	<!--Avg. Used Price-->
 <td>2021	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1818,103 +2538,278 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 1600000	</td>	<!--ISO range-->	
 <td>101	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>12.0 fps	</td>	<!--Continuous-->
+<td>12.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.70x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.2" 	</td>	<!--LCD size-->
 <td>1620k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
 <td>Fixed	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>K-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>K	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>820g	</td>	<!--Weight-->
 <td>135 x 104 x 074	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Pentax K70	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k5+iis+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k3+iii+body&_osacat=0&LH_PrefLoc=1">Pentax K5 IIs</a>	</td>	<!--Camera-->
+<td>£250	</td>	<!--Avg. Used Price-->
+<td>2013	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>16.0	</td>	<!--Megapixels-->	
+<td>Yes	</td>	<!--Stabilzation-->
+<td>No	</td>	<!--Low pass filter-->
+<td>100 - 12800	</td>	<!--ISO range-->	
+<td>11	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>7.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/180	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.61x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0"	</td>	<!--LCD size-->
+<td>921k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>Attachment	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>25fps	</td>	<!--Video FPS-->
+<td>K	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>760g	</td>	<!--Weight-->
+<td>131 x 097 x 073	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k70+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k5+iis+body&_osacat=0&LH_PrefLoc=1">Pentax K70</a>	</td>	<!--Camera-->
+<td>£401	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
 <td>24.0	</td>	<!--Megapixels-->	
-<td>In-body	</td>	<!--Stabilzation-->
+<td>4.5-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 102400	</td>	<!--ISO range-->	
 <td>11	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/6000	</td>	<!--Max shutter-->
-<td>6.0 fps	</td>	<!--Continuous-->
+<td>6.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/180	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.63x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>921k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>Attachment	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>K-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>K	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>688g	</td>	<!--Weight-->
 <td>126 x 093 x 074	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Pentax KP	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+kp+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k70+body&_osacat=0&LH_PrefLoc=1">Pentax KP</a>	</td>	<!--Camera-->
+<td>	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
 <td>24.0	</td>	<!--Megapixels-->	
-<td>In-body	</td>	<!--Stabilzation-->
+<td>5.0-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 819200	</td>	<!--ISO range-->	
 <td>27	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>7.0 fps	</td>	<!--Continuous-->
+<td>7.0	</td>	<!--Continuous-->
 <td>1/24000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/180	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>Optical	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
 <td>0.63x	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>921k	</td>	<!--LCD resolution-->
 <td>No	</td>	<!--Touch screen-->
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>Attachment	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>K-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>K	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>703g	</td>	<!--Weight-->
 <td>132 x 101 x 076	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Samsung NX1	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=ricoh+gr+camera&_sacat=0&LH_TitleDesc=0&rt=nc&LH_PrefLoc=1">Ricoh Gr</a>	</td>	<!--Camera-->
+<td>£	</td>	<!--Avg. Used Price-->
+<td>2013	</td>	<!--Release date-->
+<td>Compact	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>16.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 25600	</td>	<!--ISO range-->	
+<td>***	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>4.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/4000	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optional	</td>	<!--Viewfinder-->
+<td>Na	</td>	<!--Coverage-->	
+<td>Na	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0"	</td>	<!--LCD size-->
+<td>1230k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>Fixed 28mm	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>245g	</td>	<!--Weight-->
+<td>117 x 061 x 035	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=ricoh+gr+ii+camera&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=ricoh+gr+ii&_osacat=0&LH_PrefLoc=1">Ricoh Gr II</a>	</td>	<!--Camera-->
+<td>£342	</td>	<!--Avg. Used Price-->
+<td>2015	</td>	<!--Release date-->
+<td>Compact	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>16.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 25600	</td>	<!--ISO range-->	
+<td>9	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>4.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/4000	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optional	</td>	<!--Viewfinder-->
+<td>Na	</td>	<!--Coverage-->	
+<td>Na	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0"	</td>	<!--LCD size-->
+<td>1230k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>Fixed 28mm	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>251g	</td>	<!--Weight-->
+<td>112 x 061 x 035	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=ricoh+gr+iii&_sacat=0&LH_PrefLoc=1&rt=nc">Ricoh GR III</a>	</td>	<!--Camera-->
+<td>£587	</td>	<!--Avg. Used Price-->
+<td>2018	</td>	<!--Release date-->
+<td>Compact	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>24.0	</td>	<!--Megapixels-->	
+<td>4.0-stops	</td>	<!--Stabilzation-->
+<td>No	</td>	<!--Low pass filter-->
+<td>100 - 102400	</td>	<!--ISO range-->	
+<td>***	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>4.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/4000	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optional	</td>	<!--Viewfinder-->
+<td>Na	</td>	<!--Coverage-->	
+<td>Na	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0"	</td>	<!--LCD size-->
+<td>1037k	</td>	<!--LCD resolution-->
+<td>Yes	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>Fixed 28mm	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>257g	</td>	<!--Weight-->
+<td>108 x 062 x 033	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=samsung+nx1+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+kp+body&_osacat=0&LH_PrefLoc=1">Samsung NX1</a>	</td>	<!--Camera-->
+<td>£499	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1923,10 +2818,11 @@ th:nth-child(even) {background-color: ;}
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 25600	</td>	<!--ISO range-->	
 <td>209	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>15.0 fps	</td>	<!--Continuous-->
+<td>15.0	</td>	<!--Continuous-->
 <td>	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>***	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1939,17 +2835,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>Yes	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>NX-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>NX	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>550g	</td>	<!--Weight-->
 <td>139 x 102 x 066	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A6000	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+a6000+body&_sacat=0&LH_TitleDesc=0&_odkw=samsung+nx1+body&_osacat=0&LH_PrefLoc=1">Sony A6000</a>	</td>	<!--Camera-->
+<td>£250	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1958,10 +2858,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 25600	</td>	<!--ISO range-->	
 <td>179	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>11.0 fps	</td>	<!--Continuous-->
+<td>11.0	</td>	<!--Continuous-->
 <td>	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/160	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -1974,17 +2875,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>E-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>E	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>344g	</td>	<!--Weight-->
 <td>120 x 067 x 045	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A6400	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+a6400+body&_sacat=0&LH_TitleDesc=0&_odkw=sony+a6000+body&_osacat=0&LH_PrefLoc=1">Sony A6400</a>	</td>	<!--Camera-->
+<td>£641	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -1993,10 +2898,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 32000	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
-<td>11.0 fps	</td>	<!--Continuous-->
+<td>11.0	</td>	<!--Continuous-->
 <td>	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/160	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2009,29 +2915,34 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>E-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>E	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>403g	</td>	<!--Weight-->
 <td>120 x 067 x 050	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A7	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+a7+camera&_sacat=0&LH_TitleDesc=0&_odkw=ricoh+gr+1+camera&_osacat=0&LH_PrefLoc=1">Sony A7</a>	</td>	<!--Camera-->
+<td>£350	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>-50 - 25600	</td>	<!--ISO range-->	
+<td>50 - 25600	</td>	<!--ISO range-->	
 <td>117	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2044,17 +2955,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>FE-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>FE	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>474g	</td>	<!--Weight-->
 <td>127 x 094 x 048	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A7 II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+a7+ii+camera&_sacat=0&LH_TitleDesc=0&_odkw=sony+a7+camera&_osacat=0&LH_PrefLoc=1">Sony A7 II</a>	</td>	<!--Camera-->
+<td>£610	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -2063,10 +2978,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 25600	</td>	<!--ISO range-->	
 <td>117	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2079,17 +2995,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
-<td>FE-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
+<td>FE	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>599g	</td>	<!--Weight-->
 <td>127 x 096 x 060	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l2632&_nkw=sony+a7+iii&_sacat=31388">Sony A7 III	</a></td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=sony+a7+iii&_sacat=31388&rt=nc&LH_PrefLoc=1">Sony A7 III	</a></td>	<!--Camera-->
+<td>£995	</td>	<!--Avg. Used Price-->
 <td>2018	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -2098,10 +3018,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>693	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>10.0 fps	</td>	<!--Continuous-->
+<td>10.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2114,30 +3035,75 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>FE-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>FE	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>650g	</td>	<!--Weight-->
 <td>127 x 096 x 074	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A7R III	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=sony+a7c+body&_sacat=0&rt=nc&LH_PrefLoc=1">Sony A7C</a>	</td>	<!--Camera-->
+<td>£1160	</td>	<!--Avg. Used Price-->
+<td>2020	</td>	<!--Release date-->
+<td>Mirrorless	</td>	<!--Type-->
+<td>Full frame	</td>	<!--Sensor-->
+<td>24.0	</td>	<!--Megapixels-->	
+<td>5.0-stops	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 51200	</td>	<!--ISO range-->	
+<td>693	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
+<td>1/4000	</td>	<!--Max shutter-->
+<td>10.0	</td>	<!--Continuous-->
+<td>1/8000	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/160	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Electronic	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.59x	</td>	<!--Magnification-->
+<td>2360k	</td>	<!--EVF resolution-->
+<td>3.0"	</td>	<!--LCD size-->
+<td>922k	</td>	<!--LCD resolution-->
+<td>Yes	</td>	<!--Touch screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
+<td>No	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4K	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>E	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>509g	</td>	<!--Weight-->
+<td>124 x 071 x 060	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=sony+a7r+iii+body&_sacat=0">Sony A7R III</a>	</td>	<!--Camera-->
+<td>£1249	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>42.0	</td>	<!--Megapixels-->	
-<td>In-body	</td>	<!--Stabilzation-->
+<td>5.0-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
 <td>100 - 32000	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>10.0 fps	</td>	<!--Continuous-->
+<td>10.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
-<td>***	</td>	<!--Flash sync-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
@@ -2149,17 +3115,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>FE-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>FE	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>657g	</td>	<!--Weight-->
 <td>127 x 096 x 074	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A7S	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=sony+a7s+body&_sacat=0&LH_TitleDesc=0&rt=nc&LH_PrefLoc=1">Sony A7S</a>	</td>	<!--Camera-->
+<td>£420	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -2168,11 +3138,12 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 409600	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
-<td>***	</td>	<!--Flash sync-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
@@ -2184,30 +3155,35 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>FE-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>FE	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>489g	</td>	<!--Weight-->
 <td>127 x 094 x 048	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A7S II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+a7s+ii+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=sony+a7s+iii+body&_osacat=0&LH_PrefLoc=1">Sony A7S II</a>	</td>	<!--Camera-->
+<td>£759	</td>	<!--Avg. Used Price-->
 <td>2015	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>12.0	</td>	<!--Megapixels-->	
-<td>In-body	</td>	<!--Stabilzation-->
+<td>4.5-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 102400	</td>	<!--ISO range-->	
 <td>169	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>5.0 fps	</td>	<!--Continuous-->
+<td>5.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
-<td>***	</td>	<!--Flash sync-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
@@ -2219,30 +3195,35 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>FE-mount	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>FE	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>627g	</td>	<!--Weight-->
 <td>127 x 096 x 060	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A7S III	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=sony+a7s+iii+body&_sacat=0&LH_TitleDesc=0&rt=nc&LH_PrefLoc=1">Sony A7S III</a>	</td>	<!--Camera-->
+<td>£2599	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>12.0	</td>	<!--Megapixels-->	
-<td>In-body	</td>	<!--Stabilzation-->
+<td>5.5-stops	</td>	<!--Stabilzation-->
 <td>***	</td>	<!--Low pass filter-->
-<td>-80 - 102400	</td>	<!--ISO range-->	
+<td>80 - 102400	</td>	<!--ISO range-->	
 <td>759	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>10.0 fps	</td>	<!--Continuous-->
+<td>10.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
-<td>***	</td>	<!--Flash sync-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
 <td>100%	</td>	<!--Coverage-->	
@@ -2251,20 +3232,24 @@ th:nth-child(even) {background-color: ;}
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1229k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
-<td>Full axis	</td>	<!--Tilt screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 120fps	</td>	<!--Video-->
-<td>FE-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>120fps	</td>	<!--Video FPS-->
+<td>FE	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>699g	</td>	<!--Weight-->
 <td>129 x 097 x 081	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A9	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+a9+body&_sacat=0&LH_TitleDesc=0&_odkw=sony+a7s+ii+body&_osacat=0&LH_PrefLoc=1">Sony A9</a>	</td>	<!--Camera-->
+<td>£1580	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->	
@@ -2273,10 +3258,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>693	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>20.0 fps	</td>	<!--Continuous-->
+<td>20.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2289,17 +3275,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>FE-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>FE	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>673g	</td>	<!--Weight-->
 <td>127 x 096 x 063	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony A9 II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+a9+ii+body&_sacat=0&LH_TitleDesc=0&_odkw=sony+a9+body&_osacat=0&LH_PrefLoc=1">Sony A9 II</a>	</td>	<!--Camera-->
+<td>£2693	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
@@ -2308,10 +3298,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 51200	</td>	<!--ISO range-->	
 <td>693	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
-<td>20.0 fps	</td>	<!--Continuous-->
+<td>20.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>No	</td>	<!--Yes flash-->
+<td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2324,17 +3315,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
-<td>FE-mount	</td>	<!--Lens mount-->
-<td>2 (SD card)	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>Yes	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>FE	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
 <td>Yes	</td>	<!--Weather sealed-->
 <td>678g	</td>	<!--Weight-->
 <td>129 x 096 x 076	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony RX100	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=sony+rx100&_sacat=0&rt=nc&LH_PrefLoc=1">Sony RX100</a>	</td>	<!--Camera-->
+<td>£109	</td>	<!--Avg. Used Price-->
 <td>2012	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>13.20mm x 8.80mm	</td>	<!--Sensor-->
@@ -2343,33 +3338,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 25600	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
-<td>10.0 fps	</td>	<!--Continuous-->
+<td>10.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/2000	</td>	<!--Flash sync-->
 <td>No	</td>	<!--Hot-shoe-->
-<td>No viewfinder	</td>	<!--Viewfinder-->
-<td>No	</td>	<!--Coverage-->	
-<td>No	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>No	</td>	<!--Viewfinder-->
+<td>Na	</td>	<!--Coverage-->	
+<td>Na	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1229k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
 <td>Fixed 24-70mm	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>240g	</td>	<!--Weight-->
 <td>102 x 058 x 036	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony RX100 II	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+rx100+ii&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=sony+rx100&_osacat=0&LH_PrefLoc=1">Sony RX100 II</a>	</td>	<!--Camera-->
+<td>£155	</td>	<!--Avg. Used Price-->
 <td>2013	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>13.20mm x 8.80mm	</td>	<!--Sensor-->
@@ -2378,33 +3378,38 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>160 - 12800	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
-<td>10.0 fps	</td>	<!--Continuous-->
+<td>10.0	</td>	<!--Continuous-->
 <td>-	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/2000	</td>	<!--Flash sync-->
 <td>No	</td>	<!--Hot-shoe-->
-<td>No viewfinder	</td>	<!--Viewfinder-->
-<td>No	</td>	<!--Coverage-->	
-<td>No	</td>	<!--Magnification-->
-<td>No EVF	</td>	<!--EVF resolution-->
+<td>No	</td>	<!--Viewfinder-->
+<td>Na	</td>	<!--Coverage-->	
+<td>Na	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
 <td>3.0" 	</td>	<!--LCD size-->
 <td>1229k	</td>	<!--LCD resolution-->
 <td>Yes	</td>	<!--Touch screen-->
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
 <td>Fixed 24-70mm	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>281g	</td>	<!--Weight-->
 <td>102 x 058 x 038	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony RX100 III	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+rx100+iii&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=sony+rx100+ii&_osacat=0&LH_PrefLoc=1">Sony RX100 III</a>	</td>	<!--Camera-->
+<td>£209	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>13.20mm x 8.80mm	</td>	<!--Sensor-->
@@ -2413,10 +3418,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>125 - 12800	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
-<td>10.0 fps	</td>	<!--Continuous-->
+<td>10.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/2000	</td>	<!--Flash sync-->
 <td>No	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2429,17 +3435,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>1080p 60fps	</td>	<!--Video-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>60fps	</td>	<!--Video FPS-->
 <td>Fixed 24-70mm	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>290g	</td>	<!--Weight-->
 <td>102 x 058 x 041	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony RX100 IV	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+rx100+iv&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=sony+rx100+iii&_osacat=0&LH_PrefLoc=1">Sony RX100 IV</a>	</td>	<!--Camera-->
+<td>£285	</td>	<!--Avg. Used Price-->
 <td>2015	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>13.20mm x 8.80mm	</td>	<!--Sensor-->
@@ -2448,10 +3458,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>125 - 12800	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
-<td>16.0 fps	</td>	<!--Continuous-->
+<td>16.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/2000	</td>	<!--Flash sync-->
 <td>No	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2464,17 +3475,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
 <td>Fixed 24-70mm	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>298g	</td>	<!--Weight-->
 <td>102 x 058 x 041	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony RX100 V	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+rx100+v&_sacat=0&LH_TitleDesc=0&_odkw=sony+rx100+iv&_osacat=0&LH_PrefLoc=1">Sony RX100 V</a>	</td>	<!--Camera-->
+<td>£363	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>13.20mm x 8.80mm	</td>	<!--Sensor-->
@@ -2483,10 +3498,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>125 - 12800	</td>	<!--ISO range-->	
 <td>315	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
-<td>24.0 fps	</td>	<!--Continuous-->
+<td>24.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/2000	</td>	<!--Flash sync-->
 <td>No	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2499,17 +3515,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
 <td>Fixed 24-70mm	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>299g	</td>	<!--Weight-->
 <td>102 x 058 x 041	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony RX100 VI	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+rx100+vi&_sacat=0&LH_TitleDesc=0&_odkw=sony+rx100+v&_osacat=0&LH_PrefLoc=1">Sony RX100 VI</a>	</td>	<!--Camera-->
+<td>£504	</td>	<!--Avg. Used Price-->
 <td>2018	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>13.20mm x 8.80mm	</td>	<!--Sensor-->
@@ -2518,10 +3538,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>125 - 12800	</td>	<!--ISO range-->	
 <td>315	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
-<td>24.0 fps	</td>	<!--Continuous-->
+<td>24.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/2000	</td>	<!--Flash sync-->
 <td>No	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2534,17 +3555,21 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
 <td>Fixed 24-200mm	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>301g	</td>	<!--Weight-->
 <td>102 x 058 x 043	</td>	<!--Size (mm)-->		
 </tr>
 
 <tr>
-<td>Sony RX100 VII	</td>	<!--Camera-->
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+rx100+vii&_sacat=0&LH_TitleDesc=0&_odkw=sony+rx100+vi&_osacat=0&LH_PrefLoc=1">Sony RX100 VII</a>	</td>	<!--Camera-->
+<td>£730	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>13.20mm x 8.80mm	</td>	<!--Sensor-->
@@ -2553,10 +3578,11 @@ th:nth-child(even) {background-color: ;}
 <td>Yes	</td>	<!--Low pass filter-->
 <td>125 - 12800	</td>	<!--ISO range-->	
 <td>357	</td>	<!--Autofocus-->
+<td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
-<td>20.0 fps	</td>	<!--Continuous-->
+<td>20.0	</td>	<!--Continuous-->
 <td>1/32000	</td>	<!--Max electronic-->
-<td>Yes	</td>	<!--Yes flash-->
+<td>Yes	</td>	<!--Built-in flash-->
 <td>1/2000	</td>	<!--Flash sync-->
 <td>No	</td>	<!--Hot-shoe-->
 <td>EVF	</td>	<!--Viewfinder-->
@@ -2569,17 +3595,62 @@ th:nth-child(even) {background-color: ;}
 <td>Flip	</td>	<!--Tilt screen-->
 <td>No	</td>	<!--Top LCD-->	
 <td>No	</td>	<!--Gps built in-->
-<td>	</td>	<!--Wifi built in-->	
-<td>4k 30fps	</td>	<!--Video-->
+<td>Yes	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>4k	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
 <td>Fixed 24-200mm	</td>	<!--Lens mount-->
-<td>1 (SD card)	</td>	<!--Storage slots-->
+<td>1 SD card	</td>	<!--Storage slots-->
 <td>No	</td>	<!--Weather sealed-->
 <td>302g	</td>	<!--Weight-->
 <td>102 x 058 x 043	</td>	<!--Size (mm)-->		
 </tr>
 
 
+<tr>
+<td>blank	</td>	<!--Camera-->
+<td>	</td>	<!--Avg. Used Price-->
+<td>	</td>	<!--Release date-->
+<td>	</td>	<!--Type-->
+<td>	</td>	<!--Sensor-->
+<td>	</td>	<!--Megapixels-->	
+<td>	</td>	<!--Stabilzation-->
+<td>	</td>	<!--Low pass filter-->
+<td>	</td>	<!--ISO range-->	
+<td>	</td>	<!--Autofocus-->
+<td>	</td>	<!--Auto Micro Adjust-->
+<td>	</td>	<!--Max shutter-->
+<td>	</td>	<!--Continuous-->
+<td>	</td>	<!--Max electronic-->
+<td>	</td>	<!--Built-in flash-->
+<td>	</td>	<!--Flash sync-->
+<td>	</td>	<!--Hot-shoe-->
+<td>	</td>	<!--Viewfinder-->
+<td>	</td>	<!--Coverage-->	
+<td>	</td>	<!--Magnification-->
+<td>	</td>	<!--EVF resolution-->
+<td>	</td>	<!--LCD size-->
+<td>	</td>	<!--LCD resolution-->
+<td>	</td>	<!--Touch screen-->
+<td>	</td>	<!--Tilt screen-->
+<td>	</td>	<!--Top LCD-->	
+<td>	</td>	<!--Gps built in-->
+<td>	</td>	<!--Wifi built in-->
+<td>	</td>	<!--Headphone Jack-->
+<td>	</td>	<!--Microphone Port-->	
+<td>	</td>	<!--Video-->
+<td>	</td>	<!--Video FPS-->
+<td>	</td>	<!--Lens mount-->
+<td>	</td>	<!--Storage slots-->
+<td>	</td>	<!--Weather sealed-->
+<td>	</td>	<!--Weight-->
+<td>	</td>	<!--Size (mm)-->		
+</tr>
+
+
 </table>
+
 
 </div>
 
