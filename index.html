@@ -14,7 +14,7 @@ $(function() {
 
 * {
 font-family: monospace;
-text-align: left !important;
+text-align: center !important;
 }
 
 .active {
@@ -31,7 +31,7 @@ border-spacing: 0px;
 }
 
 .container_cameras {
-margin-top: 0px !important;
+margin-top: 3% !important;
 margin: auto;
 width:80%;
 height:80%;
@@ -53,11 +53,11 @@ background:white;
 }
 
 td:nth-child(1) {
-min-width:300px !important;
+min-width:175px !important;
 position:sticky;
 left:0;
 top: 0;
-background:white  ;
+background:#FEF9E7  ;
 text-align: left !important;
 border-top: 1x solid silver;
 box-shadow: 1px 0px silver;
@@ -69,10 +69,10 @@ td:nth-child(2) {
 min-width:145px !important;
 text-align: center !important;
 position:sticky;
-left:308;
+left:183;
 top: 0;
-background:white  ;
-border-top: 1x solid silver;
+background:#FEF9E7  ;
+border-top: 1px solid silver;
 box-shadow: 1px 0px silver;
 font-weight: bol;
 }
@@ -94,11 +94,13 @@ box-shadow: px px silver;
 
 td{
 border-top:1px solid silver;
+border-right:0px solid silver;
 min-width:145px !important;
 padding:4px;
 text-align: right;
 white-space: nowra;
 box-shadow: 0px 0px silver;
+background-color:#FEF9E7;
 }
 
 t:hover {
@@ -117,15 +119,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 </style>
 <body>
 
-<h1 style="margin-left:50%;">Cameras</h1>
 
 <div class="container_cameras">
 
 <table>
 
 <tr>
-<td style="z-index: 5; font-weight: normal; border-top: 1px solid darkslateblue; background-color: darkslateblue; color:white; box-shadow: 0 0;">Camera</td>
-<td style="z-index: 5; font-weight: normal; border-top: 1px solid darkslateblue; background-color: darkslateblue; color:white; box-shadow: 0 0;">Avg. Used Price</td>
+<td style="z-index: 5; font-weight: normal; border-top: 1px solid darkslateblue; background-color: darkslateblue; color:white; box-shadow: 0 0; border-right: none;">Camera</td>
+<td style="z-index: 5; font-weight: normal; border-top: 1px solid darkslateblue; background-color: darkslateblue; color:white; box-shadow: 0 0; border-right: none;">Avg. Used Price</td>
 <th>Released		</th>
 <th>Camera Type		</th>
 <th>Sensor Size		</th>
@@ -165,11 +166,11 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+eos+10d&_sacat=0&rt=nc&LH_PrefLoc=1">Canon 10D</a>	</td>	<!--Camera-->
-<td>£33	</td>	<!--Avg. Used Price-->
+<td>£33&nbsp;	</td>	<!--Avg. Used Price-->
 <td>2003	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
-<td>6.0	</td>	<!--Megapixels-->	
+<td>&nbsp;6.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 1600	</td>	<!--ISO range-->	
@@ -177,7 +178,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
 <td>3.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -204,6 +205,328 @@ t:nth-child(even) {background-color:ghostwhite ;}
 </tr>
 
 <tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=canon+1d+body&_sacat=0">Canon 1D</a>	</td>	<!--Camera-->
+<td>£94&nbsp;	</td>	<!--Avg. Used Price-->
+<td>2001	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-H	</td>	<!--Sensor-->
+<td>&nbsp;4.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 3200	</td>	<!--ISO range-->	
+<td>45	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
+<td>1/16000	</td>	<!--Max shutter-->
+<td>8.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/500	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.72x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>2.0"	</td>	<!--LCD size-->
+<td>120k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>1585g	</td>	<!--Weight-->
+<td>156 x 158 x 080	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1d+ii+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&LH_PrefLoc=1&_sop=12">Canon 1D II</a>	</td>	<!--Camera-->
+<td>£138	</td>	<!--Avg. Used Price-->
+<td>2004	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-H	</td>	<!--Sensor-->
+<td>&nbsp;8.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 3200	</td>	<!--ISO range-->	
+<td>45	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>9.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.72x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>2.0"	</td>	<!--LCD size-->
+<td>230k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>1565g	</td>	<!--Weight-->
+<td>156 x 158 x 080	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1d+ii+n+body&_sacat=0&rt=nc&LH_PrefLoc=1">Canon 1D II N</a>	</td>	<!--Camera-->
+<td>£126	</td>	<!--Avg. Used Price-->
+<td>2005	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-H	</td>	<!--Sensor-->
+<td>&nbsp;8.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 3200	</td>	<!--ISO range-->	
+<td>45	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>9.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.72x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>2.5"	</td>	<!--LCD size-->
+<td>230k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>1565g	</td>	<!--Weight-->
+<td>156 x 158 x 080	</td>	<!--Size (mm)-->		
+</tr>
+
+
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1d+mark+iii+body&_sacat=0&LH_TitleDesc=0&rt=nc&LH_PrefLoc=1">Canon 1D III</a>	</td>	<!--Camera-->
+<td>£227	</td>	<!--Avg. Used Price-->
+<td>2007	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-H	</td>	<!--Sensor-->
+<td>10.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 3200	</td>	<!--ISO range-->	
+<td>45	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>10.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/300	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.76x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0"	</td>	<!--LCD size-->
+<td>230k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>1335g	</td>	<!--Weight-->
+<td>156 x 157 x 080	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1d+mark+iv+body&_sacat=0&LH_TitleDesc=0&LH_PrefLoc=1&_fsrp=1">Canon 1D IV</a>	</td>	<!--Camera-->
+<td>£362	</td>	<!--Avg. Used Price-->
+<td>2010	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-H	</td>	<!--Sensor-->
+<td>16.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>&nbsp;100 - 12800	</td>	<!--ISO range-->	
+<td>45	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>10.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/300	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.76x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0"	</td>	<!--LCD size-->
+<td>920k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>Eye-Fi	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>1230g	</td>	<!--Weight-->
+<td>156 x 157 x 080	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1ds&_sacat=0&_fsrp=1&rt=nc&LH_PrefLoc=1">Canon 1DS</a>	</td>	<!--Camera-->
+<td>£142	</td>	<!--Avg. Used Price-->
+<td>2002	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>Full frame	</td>	<!--Sensor-->
+<td>11.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 1250	</td>	<!--ISO range-->	
+<td>45	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>3.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.70x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>2.0"	</td>	<!--LCD size-->
+<td>120k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>1 CF card	</td>	<!--Storage slots-->
+<td>No	</td>	<!--Weather sealed-->
+<td>1585g	</td>	<!--Weight-->
+<td>156 x 158 x 080	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+1ds+ii+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&rt=nc&_odkw=canon+1ds+ii&_osacat=0&LH_PrefLoc=1">Canon 1DS II</a>	</td>	<!--Camera-->
+<td>£175	</td>	<!--Avg. Used Price-->
+<td>2005	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>Full frame	</td>	<!--Sensor-->
+<td>17.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 3200	</td>	<!--ISO range-->	
+<td>45	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>4.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.70x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>2.0"	</td>	<!--LCD size-->
+<td>230k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>2 CF cards	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>1565g	</td>	<!--Weight-->
+<td>156 x 158 x 080	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1ds+iii+body&_sacat=0&rt=nc&LH_PrefLoc=1">Canon 1DS III</a>	</td>	<!--Camera-->
+<td>£382	</td>	<!--Avg. Used Price-->
+<td>2008	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>Full frame	</td>	<!--Sensor-->
+<td>21.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>&nbsp;50 - 3200	</td>	<!--ISO range-->	
+<td>45	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>5.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.76x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0"	</td>	<!--LCD size-->
+<td>230k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>No	</td>	<!--Microphone Port-->	
+<td>Na	</td>	<!--Video-->
+<td>Na	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>1 CF / 1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>1385g	</td>	<!--Weight-->
+<td>150 x 160 x 080	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1dx&_sacat=0&rt=nc&LH_PrefLoc=1">Canon 1DX</a>	</td>	<!--Camera-->
 <td>£830	</td>	<!--Avg. Used Price-->
 <td>2011	</td>	<!--Release date-->
@@ -212,12 +535,12 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>18.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>61	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>14.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -245,19 +568,19 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+1dx+mark+ii&_sacat=31388&rt=nc&LH_PrefLoc=1">Canon 1DX II</a>	</td>	<!--Camera-->
-<td>£1325	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1325	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>20.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>61	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>16.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>No	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -285,11 +608,11 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+20d+body&_sacat=0&rt=nc&LH_PrefLoc=1">Canon 20D</a>	</td>	<!--Camera-->
-<td>£38	</td>	<!--Avg. Used Price-->
+<td>£38&nbsp;	</td>	<!--Avg. Used Price-->
 <td>2004	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->	
-<td>8.0	</td>	<!--Megapixels-->
+<td>&nbsp;8.0	</td>	<!--Megapixels-->
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 1600	</td>	<!--ISO range-->	
@@ -297,7 +620,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>5.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -325,11 +648,11 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+30d+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=canon+20d+body&_osacat=0&LH_PrefLoc=1">Canon 30D</a>	</td>	<!--Camera-->
-<td>£53	</td>	<!--Avg. Used Price-->
+<td>£53&nbsp;	</td>	<!--Avg. Used Price-->
 <td>2006	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
-<td>8.0	</td>	<!--Megapixels-->	
+<td>&nbsp;8.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
 <td>100 - 1600	</td>	<!--ISO range-->	
@@ -337,7 +660,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>5.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -365,7 +688,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=canon+40d+body&_sacat=0&LH_TitleDesc=0&_odkw=canon+30d+body&_osacat=0&LH_PrefLoc=1">Canon 40D</a>	</td>	<!--Camera-->
-<td>£70	</td>	<!--Avg. Used Price-->
+<td>£70&nbsp;	</td>	<!--Avg. Used Price-->
 <td>2007	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -377,7 +700,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>6.5	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -417,7 +740,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>6.3	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -459,7 +782,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>3.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>No	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -534,7 +857,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>22.3	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>61	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -567,14 +890,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+5d+mark+iv&_sacat=31388&rt=nc&LH_PrefLoc=1">Canon 5D IV</a>	</td>	<!--Camera-->
-<td>£1270	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1270	</td>	<!--Avg. Used Price-->
 <td>2016	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>30.4	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 32000	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 32000	</td>	<!--ISO range-->	
 <td>61	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -606,6 +929,46 @@ t:nth-child(even) {background-color:ghostwhite ;}
 </tr>
 
 <tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+5ds+body&_sacat=0&rt=nc&LH_PrefLoc=1">Canon 5DS</a>	</td>	<!--Camera-->
+<td>£956	</td>	<!--Avg. Used Price-->
+<td>2015	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>Full frame	</td>	<!--Sensor-->
+<td>51.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 6400	</td>	<!--ISO range-->	
+<td>61	</td>	<!--Autofocus-->
+<td>Yes	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>5.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
+<td>No	</td>	<!--Built-in flash-->
+<td>1/200	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>100%	</td>	<!--Coverage-->	
+<td>0.71x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.2"	</td>	<!--LCD size-->
+<td>1040k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fixed	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->	
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF	</td>	<!--Lens mount-->
+<td>2 SD cards	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>930g	</td>	<!--Weight-->
+<td>152 x 116 x 076	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+6d+body+only&_sacat=0&LH_TitleDesc=0&_odkw=canon+6d+ii+body+only&_osacat=0&_sop=12&LH_PrefLoc=1">Canon 6D</a>	</td>	<!--Camera-->
 <td>£375	</td>	<!--Avg. Used Price-->
 <td>2013	</td>	<!--Release date-->
@@ -614,7 +977,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>11	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -654,7 +1017,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>26.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 40000	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 40000	</td>	<!--ISO range-->	
 <td>45	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -699,7 +1062,47 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>5.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
+<td>Yes	</td>	<!--Built-in flash-->
+<td>1/250	</td>	<!--Flash sync-->
+<td>Yes	</td>	<!--Hot-shoe-->
+<td>Optical	</td>	<!--Viewfinder-->
+<td>96%	</td>	<!--Coverage-->	
+<td>0.60x	</td>	<!--Magnification-->
+<td>Na	</td>	<!--EVF resolution-->
+<td>3.0" 	</td>	<!--LCD size-->
+<td>1040k	</td>	<!--LCD resolution-->
+<td>No	</td>	<!--Touch screen-->
+<td>Fully articulating	</td>	<!--Tilt screen-->
+<td>Yes	</td>	<!--Top LCD-->	
+<td>No	</td>	<!--Gps built in-->
+<td>No	</td>	<!--Wifi built in-->
+<td>No	</td>	<!--Headphone Jack-->
+<td>Yes	</td>	<!--Microphone Port-->
+<td>1080p	</td>	<!--Video-->
+<td>30fps	</td>	<!--Video FPS-->
+<td>EF-S & EF	</td>	<!--Lens mount-->
+<td>1 SD card	</td>	<!--Storage slots-->
+<td>Yes	</td>	<!--Weather sealed-->
+<td>755g	</td>	<!--Weight-->
+<td>145 x 106 x 079	</td>	<!--Size (mm)-->		
+</tr>
+
+<tr>
+<td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+60da+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&rt=nc&LH_PrefLoc=1">Canon 60D A</a>	</td>	<!--Camera-->
+<td>£	</td>	<!--Avg. Used Price-->
+<td>2012	</td>	<!--Release date-->
+<td>DSLR	</td>	<!--Type-->
+<td>APS-C	</td>	<!--Sensor-->
+<td>18.0	</td>	<!--Megapixels-->	
+<td>No	</td>	<!--Stabilzation-->
+<td>Yes	</td>	<!--Low pass filter-->
+<td>100 - 6400	</td>	<!--ISO range-->	
+<td>9	</td>	<!--Autofocus-->
+<td>No	</td>	<!--Auto Micro Adjust-->
+<td>1/8000	</td>	<!--Max shutter-->
+<td>5.0	</td>	<!--Continuous-->
+<td>-	</td>	<!--Max electronic-->
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -734,12 +1137,12 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 12800	</td>	<!--ISO range-->	
 <td>19	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>7.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -774,12 +1177,12 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>45	</td>	<!--Autofocus-->
 <td>***	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
 <td>6.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/200	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -854,7 +1257,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 16000	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 16000	</td>	<!--ISO range-->	
 <td>65	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -894,12 +1297,12 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 16000	</td>	<!--ISO range-->			
+<td>&nbsp;100 - 16000	</td>	<!--ISO range-->			
 <td>45	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
 <td>7.0	</td>	<!--Continuous-->
-<td>No	</td>	<!--Max electronic-->
+<td>-	</td>	<!--Max electronic-->
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/250	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
@@ -934,7 +1337,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>33.0	</td>	<!--Megapixels-->
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>45	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -974,7 +1377,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->
 <td>3.0-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>125 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;125 - 12800	</td>	<!--ISO range-->	
 <td>31	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
@@ -1014,7 +1417,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>49	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -1047,14 +1450,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=canon+r+body&_sacat=0&rt=nc&LH_PrefLoc=1">Canon R</a>	</td>	<!--Camera-->
-<td>£1023	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1023	</td>	<!--Avg. Used Price-->
 <td>2018	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>30.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 40000	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 40000	</td>	<!--ISO range-->	
 <td>5655	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1094,7 +1497,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 32000	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 32000	</td>	<!--ISO range-->	
 <td>651	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -1127,14 +1530,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+r6+body&_sacat=0&LH_TitleDesc=0&_odkw=canon+r16+body&_osacat=0&LH_PrefLoc=1">Canon R6</a>	</td>	<!--Camera-->
-<td>£1799	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1799	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>20.0	</td>	<!--Megapixels-->	
 <td>8.0-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 102400	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;100 - 102400	</td>	<!--ISO range-->	
 <td>6072	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1167,14 +1570,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+r7+body&_sacat=0&LH_TitleDesc=0&_odkw=canon+r6+body&_osacat=0&LH_PrefLoc=1">Canon R7</a>	</td>	<!--Camera-->
-<td>	</td>	<!--Avg. Used Price-->
+<td>£	</td>	<!--Avg. Used Price-->
 <td>2022	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
 <td>33.0	</td>	<!--Megapixels-->	
 <td>6.0-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 32000	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 32000	</td>	<!--ISO range-->	
 <td>651	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1214,7 +1617,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>26.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 40000	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 40000	</td>	<!--ISO range-->	
 <td>4779	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -1247,14 +1650,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=canon+s100+camera&_sacat=0&LH_TitleDesc=0&_odkw=canon+rp+body&_osacat=0&LH_PrefLoc=1">Canon S100</a>	</td>	<!--Camera-->
-<td>£82	</td>	<!--Avg. Used Price-->
+<td>£82&nbsp;	</td>	<!--Avg. Used Price-->
 <td>2011	</td>	<!--Release date-->
 <td>Compact	</td>	<!--Type-->
 <td>5.58mm x 7.44mm	</td>	<!--Sensor-->
 <td>12.0	</td>	<!--Megapixels-->	
 <td>Optical	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>80 - 6400	</td>	<!--ISO range-->	
+<td>&nbsp;80 - 6400	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
@@ -1287,14 +1690,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fuji+gfx+100+body&_sacat=0&LH_TitleDesc=0&_odkw=fuji+gfx+100&_osacat=0&LH_PrefLoc=1">Fujifilm GFX 100</a>	</td>	<!--Camera-->
-<td>	</td>	<!--Avg. Used Price-->
+<td>£	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Medium	</td>	<!--Sensor-->
-<td>102.0	</td>	<!--Megapixels-->	
+<td>102.0&nbsp;	</td>	<!--Megapixels-->	
 <td>6.0-stops	</td>	<!--Stabilzation-->
 <td>***	</td>	<!--Low pass filter-->
-<td>100 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 12800	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -1334,7 +1737,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>16.0	</td>	<!--Megapixels-->
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 12800	</td>	<!--ISO range-->	
 <td>49	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -1414,7 +1817,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>200 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;200 - 12800	</td>	<!--ISO range-->	
 <td>273	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1447,14 +1850,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x-pro+3&_sacat=0&LH_TitleDesc=0&_odkw=fujifilm+x-pro+2&_osacat=0&LH_PrefLoc=1">Fujifilm X-Pro 3</a>	</td>	<!--Camera-->
-<td>£1182	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1182	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
 <td>26.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>160 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;160 - 12800	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1534,7 +1937,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>200 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;200 - 12800	</td>	<!--ISO range-->	
 <td>325	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1574,7 +1977,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>26.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>160 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;160 - 12800	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1607,14 +2010,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=fujifilm+x-t4+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&_odkw=fujifilm+x-t3+body&_osacat=0&LH_PrefLoc=1">Fujifilm X-T4</a>	</td>	<!--Camera-->
-<td>£1247	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1247	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
 <td>26.0	</td>	<!--Megapixels-->	
 <td>6.5-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>160 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;160 - 12800	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1654,7 +2057,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>40.0	</td>	<!--Megapixels-->	
 <td>7.0-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>125 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;125 - 12800	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1774,7 +2177,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>11	</td>	<!--Autofocus-->
 <td>No	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -1807,14 +2210,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d4s+body&_sacat=0&LH_TitleDesc=0&_fsrp=1&_odkw=nikon+d3500+body&_osacat=0&_sop=1&LH_PrefLoc=1">Nikon D4S</a>	</td>	<!--Camera-->
-<td>£1100	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1100	</td>	<!--Avg. Used Price-->
 <td>2014	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>16.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>51	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1894,7 +2297,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>51	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1927,14 +2330,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d780+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=nikon+d7200+body&_osacat=0&LH_PrefLoc=1">Nikon D780</a>	</td>	<!--Camera-->
-<td>	</td>	<!--Avg. Used Price-->
+<td>£	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>25.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>51	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -1974,7 +2377,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>36.0	</td>	<!--Megapixels-->
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>64 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;64 - 12800	</td>	<!--ISO range-->	
 <td>51	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2007,14 +2410,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+d850+body&_sacat=0&LH_TitleDesc=0&LH_BO=1&rt=nc&_odkw=nikon+d810+body&_osacat=0&_sop=1&LH_PrefLoc=1">Nikon D850</a>	</td>	<!--Camera-->
-<td>£1539	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1539	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>46.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>64 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;64 - 25600	</td>	<!--ISO range-->	
 <td>153	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2047,7 +2450,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=nikon+d90+body&_sacat=0&rt=nc&LH_PrefLoc=1">Nikon D90</a>	</td>	<!--Camera-->
-<td>£94	</td>	<!--Avg. Used Price-->
+<td>£94&nbsp;	</td>	<!--Avg. Used Price-->
 <td>2008	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -2094,7 +2497,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>25.0	</td>	<!--Megapixels-->	
 <td>5.0-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>273	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2127,14 +2530,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=nikon+z6+ii+body&_sacat=0&LH_TitleDesc=0&_odkw=nikon+z6+body&_osacat=0&LH_PrefLoc=1">Nikon Z6 II</a>	</td>	<!--Camera-->
-<td>£1459	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1459	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>25.0	</td>	<!--Megapixels-->	
 <td>5.0-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>273	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2169,14 +2572,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=om+system+om-1+body&_sacat=0&LH_TitleDesc=0&_odkw=nikon+z6+ii+body&_osacat=0&LH_PrefLoc=1">OM System OM-1</a>	</td>	<!--Camera-->
-<td>£1600	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1600	</td>	<!--Avg. Used Price-->
 <td>2022	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Four thirds	</td>	<!--Sensor-->	
 <td>20.0	</td>	<!--Megapixels-->
 <td>7.0-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>200 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;200 - 25600	</td>	<!--ISO range-->	
 <td>1053	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2209,14 +2612,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=panasonic+lumix+g5+body&_sacat=0&LH_TitleDesc=0&_odkw=om+system+om-1+body&_osacat=0&LH_PrefLoc=1">Panasonic Lumix G5</a>	</td>	<!--Camera-->
-<td>£71	</td>	<!--Avg. Used Price-->
+<td>£71&nbsp;	</td>	<!--Avg. Used Price-->
 <td>2012	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Four thirds	</td>	<!--Sensor-->
 <td>16.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>160 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;160 - 12800	</td>	<!--ISO range-->	
 <td>23	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -2256,7 +2659,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>6.5-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>200 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;200 - 25600	</td>	<!--ISO range-->	
 <td>225	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2296,7 +2699,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>16.0	</td>	<!--Megapixels-->	
 <td>4.5-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>200 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;200 - 25600	</td>	<!--ISO range-->	
 <td>49	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -2336,7 +2739,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>36.0	</td>	<!--Megapixels-->	
 <td>5.0-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 204800	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;100 - 204800	</td>	<!--ISO range-->	
 <td>33	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2369,14 +2772,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k1+ii+body&_sacat=0&LH_TitleDesc=0&rt=nc&_odkw=pentax+k1+body&_osacat=0&LH_PrefLoc=1">Pentax K1 II</a>	</td>	<!--Camera-->
-<td>	</td>	<!--Avg. Used Price-->
+<td>£	</td>	<!--Avg. Used Price-->
 <td>2018	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->	
 <td>36.0	</td>	<!--Megapixels-->
 <td>5.0-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 819200	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;100 - 819200	</td>	<!--ISO range-->	
 <td>33	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2409,7 +2812,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k10d+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k1+ii+body&_osacat=0&LH_PrefLoc=1">Pentax K10D</a>	</td>	<!--Camera-->
-<td>£89	</td>	<!--Avg. Used Price-->
+<td>£89&nbsp;	</td>	<!--Avg. Used Price-->
 <td>2006	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
@@ -2456,7 +2859,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>In-body	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>27	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2489,14 +2892,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k3+ii+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k3+body&_osacat=0&LH_PrefLoc=1">Pentax K3 II</a>	</td>	<!--Camera-->
-<td>	</td>	<!--Avg. Used Price-->
+<td>£	</td>	<!--Avg. Used Price-->
 <td>2015	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
 <td>24.0	</td>	<!--Megapixels-->	
 <td>4.5-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>27	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2529,14 +2932,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+k3+iii+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k3+ii+body&_osacat=0&LH_PrefLoc=1">Pentax K3 III</a>	</td>	<!--Camera-->
-<td>	</td>	<!--Avg. Used Price-->
+<td>£	</td>	<!--Avg. Used Price-->
 <td>2021	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
 <td>26.0	</td>	<!--Megapixels-->	
 <td>5.5-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 1600000	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;&nbsp;100 - 1600000	</td>	<!--ISO range-->	
 <td>101	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2576,7 +2979,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>16.0	</td>	<!--Megapixels-->	
 <td>Yes	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 12800	</td>	<!--ISO range-->	
 <td>11	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2616,7 +3019,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>4.5-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 102400	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;100 - 102400	</td>	<!--ISO range-->	
 <td>11	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/6000	</td>	<!--Max shutter-->
@@ -2649,14 +3052,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=pentax+kp+body&_sacat=0&LH_TitleDesc=0&_odkw=pentax+k70+body&_osacat=0&LH_PrefLoc=1">Pentax KP</a>	</td>	<!--Camera-->
-<td>	</td>	<!--Avg. Used Price-->
+<td>£	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>DSLR	</td>	<!--Type-->
 <td>APS-C	</td>	<!--Sensor-->
 <td>24.0	</td>	<!--Megapixels-->	
 <td>5.0-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 819200	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;100 - 819200	</td>	<!--ISO range-->	
 <td>27	</td>	<!--Autofocus-->
 <td>Yes	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2696,7 +3099,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>16.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>***	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -2705,7 +3108,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/4000	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
-<td>Optional	</td>	<!--Viewfinder-->
+<td>Attachment	</td>	<!--Viewfinder-->
 <td>Na	</td>	<!--Coverage-->	
 <td>Na	</td>	<!--Magnification-->
 <td>Na	</td>	<!--EVF resolution-->
@@ -2736,7 +3139,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>16.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>9	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -2745,7 +3148,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>Yes	</td>	<!--Built-in flash-->
 <td>1/4000	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
-<td>Optional	</td>	<!--Viewfinder-->
+<td>Attachment	</td>	<!--Viewfinder-->
 <td>Na	</td>	<!--Coverage-->	
 <td>Na	</td>	<!--Magnification-->
 <td>Na	</td>	<!--EVF resolution-->
@@ -2776,7 +3179,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>4.0-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 102400	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;100 - 102400	</td>	<!--ISO range-->	
 <td>***	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -2785,7 +3188,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>No	</td>	<!--Built-in flash-->
 <td>1/4000	</td>	<!--Flash sync-->
 <td>Yes	</td>	<!--Hot-shoe-->
-<td>Optional	</td>	<!--Viewfinder-->
+<td>Attachment	</td>	<!--Viewfinder-->
 <td>Na	</td>	<!--Coverage-->	
 <td>Na	</td>	<!--Magnification-->
 <td>Na	</td>	<!--EVF resolution-->
@@ -2816,7 +3219,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>28.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>209	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2856,7 +3259,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>179	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -2896,7 +3299,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 32000	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 32000	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -2936,7 +3339,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>50 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;50 - 25600	</td>	<!--ISO range-->	
 <td>117	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -2976,7 +3379,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>4.5-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>117	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -3016,7 +3419,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>24.0	</td>	<!--Megapixels-->	
 <td>5.0-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>693	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -3049,14 +3452,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=sony+a7c+body&_sacat=0&rt=nc&LH_PrefLoc=1">Sony A7C</a>	</td>	<!--Camera-->
-<td>£1160	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1160	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>24.0	</td>	<!--Megapixels-->	
 <td>5.0-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>693	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/4000	</td>	<!--Max shutter-->
@@ -3089,14 +3492,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=sony+a7r+iii+body&_sacat=0">Sony A7R III</a>	</td>	<!--Camera-->
-<td>£1249	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1249	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>42.0	</td>	<!--Megapixels-->	
 <td>5.0-stops	</td>	<!--Stabilzation-->
 <td>No	</td>	<!--Low pass filter-->
-<td>100 - 32000	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 32000	</td>	<!--ISO range-->	
 <td>425	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -3136,7 +3539,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>12.0	</td>	<!--Megapixels-->	
 <td>No	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 409600	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;100 - 409600	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -3176,7 +3579,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>12.0	</td>	<!--Megapixels-->	
 <td>4.5-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 102400	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;100 - 102400	</td>	<!--ISO range-->	
 <td>169	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -3209,14 +3612,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=sony+a7s+iii+body&_sacat=0&LH_TitleDesc=0&rt=nc&LH_PrefLoc=1">Sony A7S III</a>	</td>	<!--Camera-->
-<td>£2599	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£2599	</td>	<!--Avg. Used Price-->
 <td>2020	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>12.0	</td>	<!--Megapixels-->	
 <td>5.5-stops	</td>	<!--Stabilzation-->
 <td>***	</td>	<!--Low pass filter-->
-<td>80 - 102400	</td>	<!--ISO range-->	
+<td>&nbsp;&nbsp;&nbsp;80 - 102400	</td>	<!--ISO range-->	
 <td>759	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -3249,14 +3652,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+a9+body&_sacat=0&LH_TitleDesc=0&_odkw=sony+a7s+ii+body&_osacat=0&LH_PrefLoc=1">Sony A9</a>	</td>	<!--Camera-->
-<td>£1580	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£1580	</td>	<!--Avg. Used Price-->
 <td>2017	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->	
 <td>24.0	</td>	<!--Megapixels-->
 <td>5.0-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>693	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -3289,14 +3692,14 @@ t:nth-child(even) {background-color:ghostwhite ;}
 
 <tr>
 <td><a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=sony+a9+ii+body&_sacat=0&LH_TitleDesc=0&_odkw=sony+a9+body&_osacat=0&LH_PrefLoc=1">Sony A9 II</a>	</td>	<!--Camera-->
-<td>£2693	</td>	<!--Avg. Used Price-->
+<td>&nbsp;£2693	</td>	<!--Avg. Used Price-->
 <td>2019	</td>	<!--Release date-->
 <td>Mirrorless	</td>	<!--Type-->
 <td>Full frame	</td>	<!--Sensor-->
 <td>24.0	</td>	<!--Megapixels-->	
 <td>5.5-stops	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 51200	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 51200	</td>	<!--ISO range-->	
 <td>693	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/8000	</td>	<!--Max shutter-->
@@ -3336,7 +3739,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>In-body	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>100 - 25600	</td>	<!--ISO range-->	
+<td>&nbsp;100 - 25600	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
@@ -3376,7 +3779,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>In-body	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>160 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;160 - 12800	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
@@ -3416,7 +3819,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>In-body	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>125 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;125 - 12800	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
@@ -3456,7 +3859,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>In-body	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>125 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;125 - 12800	</td>	<!--ISO range-->	
 <td>25	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
@@ -3496,7 +3899,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>In-body	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>125 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;125 - 12800	</td>	<!--ISO range-->	
 <td>315	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
@@ -3536,7 +3939,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>In-body	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>125 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;125 - 12800	</td>	<!--ISO range-->	
 <td>315	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
@@ -3576,7 +3979,7 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <td>20.0	</td>	<!--Megapixels-->	
 <td>In-body	</td>	<!--Stabilzation-->
 <td>Yes	</td>	<!--Low pass filter-->
-<td>125 - 12800	</td>	<!--ISO range-->	
+<td>&nbsp;125 - 12800	</td>	<!--ISO range-->	
 <td>357	</td>	<!--Autofocus-->
 <td>Na	</td>	<!--Auto Micro Adjust-->
 <td>1/2000	</td>	<!--Max shutter-->
