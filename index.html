@@ -43,17 +43,6 @@ padding:0px;
 background:white;
 }
 
-.container_lenses {
-margin-top: 0px !important;
-margin: auto;
-width:80%;
-height:40%;
-border:0px solid whitesmoke;
-overflow:scroll ;
-padding:0px;
-background:white;
-}
-
 td:nth-child(1) {
 min-width:165px !important;
 position:sticky;
@@ -64,7 +53,7 @@ text-align: left !important;
 border-top: 1x solid silver;
 box-shadow: 1px 0px silver;
 font-weight: bol;
-z-index:4;
+z-index:8;
 }
 
 td:nth-child(2) {
@@ -77,6 +66,7 @@ background:#FEF9E7  ;
 border-top: 1px solid silver;
 box-shadow: 1px 0px silver;
 font-weight: bol;
+z-index: 8;
 }
 
 th {
@@ -85,7 +75,7 @@ background-color: darkslateblue;
 color: white;
 top: 0;
 border-right:px solid grey;
-z-index: 8;
+z-index: 6;
 padding:4px;
 text-align: right;
 font-weight: normal;
@@ -113,7 +103,7 @@ t:hover {
 }
 
 
-tr:nth-child() {color:blue;}
+
 
 t:nth-child(even) {background-color:ghostwhite ;}
 
@@ -129,8 +119,8 @@ t:nth-child(even) {background-color:ghostwhite ;}
 <table>
 <tbody>
 <tr>
-<th>Camera</th>
-<th>Avg. Price</th>
+<td style="z-index:9; background-color: darkslateblue; color: white; border-top:darkslateblue;">Camera</td>
+<td style="z-index:9; background-color: darkslateblue; color: white; border-top:darkslateblue; box-shadow: 1px 0px darkslateblue;">Avg. Price</td>
 <th>Released</th>
 <th>Camera Type</th>
 <th>Sensor Type</th>
