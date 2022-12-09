@@ -1,0 +1,532 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+$(function() {
+    $('td').click(function() {
+        $(this).parent().addClass('active'); 
+    });
+});
+
+</script>
+
+<style>
+
+* {
+font-family: monospace;
+text-align: left !important;
+}
+
+.active {
+color: red;
+font-weight:bold;
+}
+
+table{
+min-width:px;
+border-collapse:separate;
+background:white;
+border-spacing: 0px;
+
+}
+
+.container_cameras {
+margin-top: 0px !important;
+margin: auto;
+width:80%;
+height:80%;
+border:0px solid whitesmoke;
+overflow:scroll ;
+padding:0px;
+background:white;
+}
+
+.container_lenses {
+margin-top: 0px !important;
+margin: auto;
+width:80%;
+height:80%;
+border:0px solid whitesmoke;
+overflow:scroll ;
+padding:0px;
+background:white;
+}
+
+td:nth-child(1) {
+min-width:300px !important;
+position:sticky;
+left:0;
+top: 0;
+background:white  ;
+text-align: left !important;
+border-top: 1x solid silver;
+box-shadow: 1px 0px silver;
+font-weight: bol;
+z-index:4;
+}
+
+td:nth-child(2) {
+min-width:145px !important;
+text-align: center !important;
+position:sticky;
+left:308;
+top: 0;
+background:white  ;
+border-top: 1x solid silver;
+box-shadow: 1px 0px silver;
+font-weight: bol;
+}
+
+th {
+position: sticky;
+background-color: darkslateblue;
+color: white;
+top: 0;
+border-right:px solid grey;
+z-index: 3;
+padding:4px;
+text-align: right;
+font-weight: normal;
+border-top:px solid silver;
+min-width:145px !important;
+box-shadow: px px silver;
+}
+
+td{
+border-top:1px solid silver;
+min-width:145px !important;
+padding:4px;
+text-align: right;
+white-space: nowra;
+box-shadow: 0px 0px silver;
+}
+
+t:hover {
+    background-color:yellow !important;
+    color:re;
+    padding-top: px;
+    padding-bottom: px;
+}
+
+
+t:nth-child(2) {color:blue;}
+
+t:nth-child(even) {background-color:ghostwhite ;}
+
+
+</style>
+<body>
+
+<h1 style="margin-left:50%;">Lenses</h1>
+
+<div class="container_lenses">
+
+<table>
+<tr>
+<td style="z-index: 5; font-weight: normal; border-top: 1px solid darkslateblue; background-color: darkslateblue; color:white;">Lens</td>
+<th class="th_lenses">Avg. Used Price</th>
+<th class="th_lenses">Released</th>
+<th class="th_lenses">Type</th>
+<th class="th_lenses">Max Aperture</th>
+<th class="th_lenses">Min Aperture</th>
+<th class="th_lenses">Autofocus</th>
+<th class="th_lenses">AF Manual Override</th>
+<th class="th_lenses">Stabilization</th>
+<th class="th_lenses">Function Button</th>
+<th class="th_lenses">Focus Extends</th>
+<th class="th_lenses">Distance Limiter</th>
+<th class="th_lenses">Aperture Ring</th>
+<th class="th_lenses">Distance Scale</th>
+<th class="th_lenses">DOF Scale</th>
+<th class="th_lenses">Filter Thread</th>
+<th class="th_lenses">Min Focus</th>
+<th class="th_lenses">Mount</th>
+<th class="th_lenses">Weather Sealing</th>
+<th class="th_lenses">Diameter</th>
+<th class="th_lenses">Length</th>
+<th class="th_lenses">Weight</th>
+</tr>
+
+<tr>
+<td>Canon 24-105mm F4 L IS EF USM</td>	<!--Lense-->
+<td>£299</td>		<!--Avg. Used Price-->
+<td>2005</td>		<!--Release-->
+<td>Wide - tele</td>		<!--Type-->
+<td>F4.0</td>		<!--Max Aperture-->
+<td>F22</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>Yes</td>		<!--AF Manual Override-->
+<td>Yes</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>Internal</td>		<!--Focus Extends-->
+<td>No</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>No</td>		<!--Dof Scale-->
+<td>77mm</td>		<!--Filter Thread-->
+<td>45cm</td>		<!--Min Focus-->
+<td>EF</td>		<!--Mount-->
+<td>Yes</td>		<!--Weather Sealing-->
+<td>84mm</td>		<!--Diameter-->
+<td>107mm</td>		<!--Length-->
+<td>670g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Canon 50mm F1.2 L EF USM</td>	<!--Lense-->
+<td>£676</td>		<!--Avg. Used Price-->
+<td>2007</td>		<!--Release-->
+<td>Short tele</td>		<!--Type-->
+<td>F1.2</td>		<!--Max Aperture-->
+<td>F16</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>Yes</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>Internal</td>		<!--Focus Extends-->
+<td>Na</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>72mm</td>		<!--Filter Thread-->
+<td>45cm</td>		<!--Min Focus-->
+<td>EF</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>86mm</td>		<!--Diameter-->
+<td>66mm</td>		<!--Length-->
+<td>580g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Canon 50mm F1.8 II EF</td>	<!--Lense-->
+<td>£52</td>		<!--Avg. Used Price-->
+<td>1990</td>		<!--Release-->
+<td>Short tele</td>		<!--Type-->
+<td>F1.8</td>		<!--Max Aperture-->
+<td>F22</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>No</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>External</td>		<!--Focus Extends-->
+<td>Na</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>No</td>		<!--Distance Scale-->
+<td>No</td>		<!--Dof Scale-->
+<td>52mm</td>		<!--Filter Thread-->
+<td>45cm</td>		<!--Min Focus-->
+<td>EF</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>68mm</td>		<!--Diameter-->
+<td>41mm</td>		<!--Length-->
+<td>130g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Canon 50mm F1.8 EF STM</td>	<!--Lense-->
+<td>£72</td>		<!--Avg. Used Price-->
+<td>2015</td>		<!--Release-->
+<td>Short tele</td>		<!--Type-->
+<td>F1.8</td>		<!--Max Aperture-->
+<td>F22</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>Yes</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>External</td>		<!--Focus Extends-->
+<td>Na</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>No</td>		<!--Distance Scale-->
+<td>No</td>		<!--Dof Scale-->
+<td>49mm</td>		<!--Filter Thread-->
+<td>35cm</td>		<!--Min Focus-->
+<td>EF</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>69mm</td>		<!--Diameter-->
+<td>39mm</td>		<!--Length-->
+<td>159g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Canon 85mm F1.2 II EF USM</td>	<!--Lense-->
+<td>£670</td>		<!--Avg. Used Price-->
+<td>2006</td>		<!--Release-->
+<td>Tele</td>		<!--Type-->
+<td>F1.2</td>		<!--Max Aperture-->
+<td>F16</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>Yes</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>Internal</td>		<!--Focus Extends-->
+<td>Na</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>72mm</td>		<!--Filter Thread-->
+<td>95cm</td>		<!--Min Focus-->
+<td>EF</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>92mm</td>		<!--Diameter-->
+<td>84mm</td>		<!--Length-->
+<td>1025g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Canon 135mm F2.0 L EF USM</td>	<!--Lense-->
+<td>£447</td>		<!--Avg. Used Price-->
+<td>1996</td>		<!--Release-->
+<td>Tele</td>		<!--Type-->
+<td>F2.0</td>		<!--Max Aperture-->
+<td>F32</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>Yes</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>Internal</td>		<!--Focus Extends-->
+<td>Na</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>72mm</td>		<!--Filter Thread-->
+<td>90cm</td>		<!--Min Focus-->
+<td>EF</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>83mm</td>		<!--Diameter-->
+<td>112mm</td>		<!--Length-->
+<td>750g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Canon 300mm F4.0 L EF IS USM</td>	<!--Lense-->
+<td>£449</td>		<!--Avg. Used Price-->
+<td>1997</td>		<!--Release-->
+<td>Super Tele</td>		<!--Type-->
+<td>F4.0</td>		<!--Max Aperture-->
+<td>F32</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>Yes</td>		<!--AF Manual Override-->
+<td>Yes</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>Internal</td>		<!--Focus Extends-->
+<td>Yes</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>77mm</td>		<!--Filter Thread-->
+<td>150cm</td>		<!--Min Focus-->
+<td>EF</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>90mm</td>		<!--Diameter-->
+<td>221mm</td>		<!--Length-->
+<td>1190g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Pentax 16-45mm F4 ED AL DA SMC </td>	<!--Lense-->
+<td>£111</td>		<!--Avg. Used Price-->
+<td>2003</td>		<!--Release-->
+<td>Wide - normal</td>		<!--Type-->
+<td>F4.0</td>		<!--Max Aperture-->
+<td>F22</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>Yes</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>External</td>		<!--Focus Extends-->
+<td>No</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>67mm</td>		<!--Filter Thread-->
+<td>28cm</td>		<!--Min Focus-->
+<td>K</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>72mm</td>		<!--Diameter-->
+<td>92mm</td>		<!--Length-->
+<td>356g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Pentax 35mm F2.8 Macro Limited SMC </td>	<!--Lense-->
+<td>£145</td>		<!--Avg. Used Price-->
+<td>2008</td>		<!--Release-->
+<td>Normal macro</td>		<!--Type-->
+<td>F2.8</td>		<!--Max Aperture-->
+<td>F22</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>Yes</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>External</td>		<!--Focus Extends-->
+<td>Na</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>49mm</td>		<!--Filter Thread-->
+<td>14cm</td>		<!--Min Focus-->
+<td>K</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>63mm</td>		<!--Diameter-->
+<td>47mm</td>		<!--Length-->
+<td>215g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Pentax 43mm F1.9 Limited FA SMC</td>	<!--Lense-->
+<td>£293</td>		<!--Avg. Used Price-->
+<td>1997</td>		<!--Release-->
+<td>Normal</td>		<!--Type-->
+<td>F1.9</td>		<!--Max Aperture-->
+<td>F22</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>No</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>External</td>		<!--Focus Extends-->
+<td>Na</td>		<!--Distance Limiter-->
+<td>Yes</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>49mm</td>		<!--Filter Thread-->
+<td>45cm</td>		<!--Min Focus-->
+<td>K</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>64mm</td>		<!--Diameter-->
+<td>27mm</td>		<!--Length-->
+<td>155g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Pentax 50mm F1.4 FA SMC</td>	<!--Lense-->
+<td>£108</td>		<!--Avg. Used Price-->
+<td>1991</td>		<!--Release-->
+<td>Short tele</td>		<!--Type-->
+<td>F1.4</td>		<!--Max Aperture-->
+<td>F22</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>No</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>External</td>		<!--Focus Extends-->
+<td>Na</td>		<!--Distance Limiter-->
+<td>Yes</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>49mm</td>		<!--Filter Thread-->
+<td>45cm</td>		<!--Min Focus-->
+<td>K</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>64mm</td>		<!--Diameter-->
+<td>38mm</td>		<!--Length-->
+<td>220g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Pentax 50-135MM F2.8 DA SMC ED</td>	<!--Lense-->
+<td></td>		<!--Avg. Used Price-->
+<td>2007</td>		<!--Release-->
+<td>Short - Long Tele</td>		<!--Type-->
+<td>F2.8</td>		<!--Max Aperture-->
+<td>F22</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>***</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>Internal</td>		<!--Focus Extends-->
+<td>No</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>67mm</td>		<!--Filter Thread-->
+<td>100cm</td>		<!--Min Focus-->
+<td>K</td>		<!--Mount-->
+<td>Yes</td>		<!--Weather Sealing-->
+<td>77mm</td>		<!--Diameter-->
+<td>136mm</td>		<!--Length-->
+<td>685g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Pentax 55-300mm F4.5-6.3 HD ED PLM WR RE</td>	<!--Lense-->
+<td>£235</td>		<!--Avg. Used Price-->
+<td>2016</td>		<!--Release-->
+<td>Short - long tele</td>		<!--Type-->
+<td>F4.5</td>		<!--Max Aperture-->
+<td>F32</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>Yes</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>External</td>		<!--Focus Extends-->
+<td>No</td>		<!--Distance Limiter-->
+<td>No</td>		<!--Aperture Ring-->
+<td>No</td>		<!--Distance Scale-->
+<td>No</td>		<!--Dof Scale-->
+<td>58mm</td>		<!--Filter Thread-->
+<td>95cm</td>		<!--Min Focus-->
+<td>K</td>		<!--Mount-->
+<td>Yes</td>		<!--Weather Sealing-->
+<td>77mm</td>		<!--Diameter-->
+<td>89mm</td>		<!--Length-->
+<td>471g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td>Pentax 77mm F1.8 Limited FA SMC</td>	<!--Lense-->
+<td>£395</td>		<!--Avg. Used Price-->
+<td>1999</td>		<!--Release-->
+<td>Tele</td>		<!--Type-->
+<td>F1.8</td>		<!--Max Aperture-->
+<td>F22</td>		<!--Min Aperture-->
+<td>Yes</td>		<!--Autofocus-->
+<td>No</td>		<!--AF Manual Override-->
+<td>No</td>		<!--Stabilization-->
+<td>No</td>		<!--Function Button-->
+<td>External</td>		<!--Focus Extends-->
+<td>Na</td>		<!--Distance Limiter-->
+<td>Yes</td>		<!--Aperture Ring-->
+<td>Yes</td>		<!--Distance Scale-->
+<td>Yes</td>		<!--Dof Scale-->
+<td>49mm</td>		<!--Filter Thread-->
+<td>70cm</td>		<!--Min Focus-->
+<td>K</td>		<!--Mount-->
+<td>No</td>		<!--Weather Sealing-->
+<td>64mm</td>		<!--Diameter-->
+<td>48mm</td>		<!--Length-->
+<td>270g</td>		<!--Weight-->
+</tr>
+
+<tr>
+<td></td>	<!--Lense-->
+<td></td>		<!--Avg. Used Price-->
+<td></td>		<!--Release-->
+<td></td>		<!--Type-->
+<td></td>		<!--Max Aperture-->
+<td></td>		<!--Min Aperture-->
+<td></td>		<!--Autofocus-->
+<td></td>		<!--AF Manual Override-->
+<td></td>		<!--Stabilization-->
+<td></td>		<!--Function Button-->
+<td></td>		<!--Focus Extends-->
+<td></td>		<!--Distance Limiter-->
+<td></td>		<!--Aperture Ring-->
+<td></td>		<!--Distance Scale-->
+<td></td>		<!--Dof Scale-->
+<td></td>		<!--Filter Thread-->
+<td></td>		<!--Min Focus-->
+<td></td>		<!--Mount-->
+<td></td>		<!--Weather Sealing-->
+<td></td>		<!--Diameter-->
+<td></td>		<!--Length-->
+<td></td>		<!--Weight-->
+</tr>
+
+
+
+
+</table>
+</div>
+
+</body>
+</html>
